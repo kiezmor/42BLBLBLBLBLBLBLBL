@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/23 00:06:58 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/23 03:35:56 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/11/23 04:04:05 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*tmp;
 
-	tmp = (char *)malloc(sizeof(*tmp) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (!tmp)
+	if (!s1 || !s2)
 		return (NULL);
-	ft_strcpy(tmp, s1);
-	ft_strcat(tmp, s2);
+	tmp = ft_strnew(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (tmp != NULL)
+	{
+		ft_strcpy(tmp, s2);
+		ft_strcat(tmp, s2);
+	}
 	return (tmp);
 }
 
