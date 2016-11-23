@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/23 00:06:58 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/23 04:04:05 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/11/23 22:49:22 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (tmp != NULL)
 	{
 		ft_strcpy(tmp, s2);
-		ft_strcat(tmp, s2);
 	}
+
+
+	
 	return (tmp);
 }
 
