@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vpluchar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 17:12:53 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/09 17:15:13 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/11/23 00:24:54 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 char	*ft_strncat(char *dest, char *src, int nb)
 {

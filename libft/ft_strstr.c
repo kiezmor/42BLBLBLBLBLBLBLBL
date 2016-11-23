@@ -3,31 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vpluchar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 02:04:33 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/16 02:07:41 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/11/22 01:53:45 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
-char	*ft_strstr(char *str, char *to_find)
+char	*ft_strstr(const char *big, const char *little)
 {
 	int	v;
 	int	p;
 
 	v = 0;
 	p = 0;
-	if (to_find[0] == '\0')
-		return (str);
-	while (str[p] != '\0')
+	if (little[0] == '\0')
+		return (big);
+	while (big[p] != '\0')
 	{
-		while (str[p + v] == to_find[v])
+		while (big[p + v] == little[v])
 		{
 			v++;
-			if (to_find[v] == '\0')
-				return (&str[p]);
+			if (little[v] == '\0')
+				return (&big[p]);
 		}
 		p++;
 		v = 0;

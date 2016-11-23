@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/17 00:05:04 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/22 01:53:42 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/11/22 04:36:07 by vpluchar          #+#    #+#             */
+/*   Updated: 2016/11/22 05:41:44 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_strequ(char const *s1, char const *s2)
 {
-	int	i;
-
-	i = (int)ft_strlen(s) + 1;
-	while (i--)
-		if (*(s + i) == (char)c)
-			return ((char *)s + i);
-	return (NULL);
+	while (*s1 && *s2)
+	{
+		s1++;
+		s2++;
+		if (*s1 != *s2)
+			return (0);
+	}
+	return (1);
 }

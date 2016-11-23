@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/17 00:05:04 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/22 01:53:42 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/11/22 06:00:50 by vpluchar          #+#    #+#             */
+/*   Updated: 2016/11/22 23:21:35 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	int	i;
-
-	i = (int)ft_strlen(s) + 1;
-	while (i--)
-		if (*(s + i) == (char)c)
-			return ((char *)s + i);
-	return (NULL);
+	while (*s1 && *s2 && n)
+	{
+		s1++;
+		s2++;
+		n--;
+		if (*s1 != *s2 || !n)
+			return (0);
+	}
+	return (1);
 }

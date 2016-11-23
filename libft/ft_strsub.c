@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/17 00:05:04 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/22 01:53:42 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/11/22 23:26:25 by vpluchar          #+#    #+#             */
+/*   Updated: 2016/11/23 00:28:39 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	int	i;
+	size_t	i;
 
-	i = (int)ft_strlen(s) + 1;
-	while (i--)
-		if (*(s + i) == (char)c)
-			return ((char *)s + i);
-	return (NULL);
+	i = 0;
+	if (!s)
+		return (NULL);
+	if (!(tmp = ft_strnew(len)))
+		return (NULL);
+	while (i < len)
+		*(tmp + i++) = *(s + start++);
+	return (tmp);
 }

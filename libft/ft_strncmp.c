@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vpluchar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 04:19:33 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/16 04:26:22 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/11/22 01:53:31 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
-int		ft_strncmp(char *s1, char *s2, unsigned int n)
+int		ft_strncmp(char *s1, char *s2, size_t n)
 {
-	unsigned int	v;
+	size_t	v;
 
 	v = 0;
 	while (s1[v] == s2[v] && s1[v] != '\0' && s2[v] != '\0' && v <= n)
