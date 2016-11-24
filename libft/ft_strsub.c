@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 23:26:25 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/23 00:28:39 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/11/24 02:09:10 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
+	char	*tmp;
 
 	i = 0;
 	if (!s)
