@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/25 03:41:39 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/25 03:52:07 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/11/25 05:14:43 by vpluchar          #+#    #+#             */
+/*   Updated: 2016/11/25 05:16:22 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+void	ft_putstr_fd(char const *s, int fd)
 {
-	write(1, s, ft_strlen(s));
+	write(fd, s, ft_strlen(s));
 }

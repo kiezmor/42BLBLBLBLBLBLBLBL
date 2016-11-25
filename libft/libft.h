@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/17 00:10:07 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/25 03:43:14 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/11/25 05:18:27 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,10 @@ char	**ft_strspilt(char const *s, char c); //TEST OK
 char	*ft_itoa(int n); //TEST OK
 void	ft_putchar(char c); //GITHUB
 void	ft_putstr(char const *s); //GITHUB
-
+void	ft_putendl(char const *s);
+void ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putendl_fd(char const *s, int fd);
 
 int		ft_isspace(int c); //TEST OK
 

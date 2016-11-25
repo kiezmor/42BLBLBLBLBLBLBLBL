@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/25 03:41:39 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/25 03:52:07 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/11/25 05:07:02 by vpluchar          #+#    #+#             */
+/*   Updated: 2016/11/25 05:11:54 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+void	ft_putnbr(int n)
 {
-	write(1, s, ft_strlen(s));
+	ft_putstr(ft_itoa(n));
 }
