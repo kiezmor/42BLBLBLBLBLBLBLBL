@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/23 23:24:36 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/25 01:43:20 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/11/25 03:16:37 by vpluchar          #+#    #+#             */
+/*   Updated: 2016/11/25 03:17:38 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(const char *s)
+void	ft_putchar(char c)
 {
-	int		endn;
-	char	*tmp;
-
-	while (ft_isspace(*s) == 1)
-		s++;
-	endn = ft_strlen((char *)s) - 1;
-	while (ft_isspace(s[endn]) == 1)
-		endn--;
-	if (!(tmp = ft_strnew(endn + 1)))
-		return (NULL);
-	ft_strncpy(tmp, s, endn + 1);
-	return (tmp);
+	write(1, &c, 1);
 }

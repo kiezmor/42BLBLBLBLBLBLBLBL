@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/17 00:10:07 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/24 03:08:39 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/11/25 03:43:14 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,13 @@ int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
 char	*ft_strsub(char const *s, unsigned int start, size_t len); //TEST OK
 char	*ft_strjoin(char const *s1, char const *s2); //TEST OK
-char	*ft_strtrim(const char *s);
+char	*ft_strtrim(const char *s); //TEST OK
+char	**ft_strspilt(char const *s, char c); //TEST OK
+char	*ft_itoa(int n); //TEST OK
+void	ft_putchar(char c); //GITHUB
+void	ft_putstr(char const *s); //GITHUB
 
-int		ft_isspace(int c);
+
+int		ft_isspace(int c); //TEST OK
 
 #endif
