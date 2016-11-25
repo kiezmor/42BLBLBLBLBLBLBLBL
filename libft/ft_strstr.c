@@ -12,25 +12,21 @@
 
 #include "libft.h"
 
-char	*ft_strstr(const char *b, const char *l)
+char	*ft_strstr(const char *b, const char *s)
 {
-	int	v;
-	int	p;
+	int j;
 
-	v = 0;
-	p = 0;
-	if (l[0] == '\0')
-		return (b);
-	while (b[p] != '\0')
+	j = 0;
+	if (!(*s))
+		return ((char *)b);
+	while (*b)
 	{
-		while (b[p + v] == l[v])
-		{
-			v++;
-			if (l[v] == '\0')
-				return (&b[p]);
-		}
-		p++;
-		v = 0;
+		while (b[j] == s[j] && s[j] && b[j])
+			j++;
+		if (!s[j])
+			return ((char *)b);
+		j = 0;
+		b++;
 	}
 	return (NULL);
 }

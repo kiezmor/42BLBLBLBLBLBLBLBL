@@ -50,7 +50,7 @@ int					ft_strncmp(char *s1, char *s2, size_t n);
 char				*ft_strncpy(char *dst, const char *src, size_t len);
 char				*ft_strnstr(const char *b, const char *l, size_t len);
 char				*ft_strrchr(const char *s, int c);
-char				*ft_strstr(const char *b, const char *l);
+char				*ft_strstr(const char *b, const char *s);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 
