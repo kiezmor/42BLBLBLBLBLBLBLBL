@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/17 00:10:07 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/25 06:14:38 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/11/27 20:20:09 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 
-
+t_list				*ft_lstnew(void const *content, size_t content_size);
 
 int					ft_isspace(int c);
 
