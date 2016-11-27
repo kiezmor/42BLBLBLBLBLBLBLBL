@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-char	*ft_strstr(const char *b, const char *l)
+char	*ft_strstr(const char *b, const char *s)
 {
-	int	v;
-	int	p;
+	int j;
 
+<<<<<<< HEAD
 	v = 0;
 	p = 0;
 	if (l[0] == '\0')
@@ -31,6 +31,19 @@ char	*ft_strstr(const char *b, const char *l)
 		}
 		p++;
 		v = 0;
+=======
+	j = 0;
+	if (!(*s))
+		return ((char *)b);
+	while (*b)
+	{
+		while (b[j] == s[j] && s[j] && b[j])
+			j++;
+		if (!s[j])
+			return ((char *)b);
+		j = 0;
+		b++;
+>>>>>>> ee8f5868f4273166751623ae067974a646d739f0
 	}
 	return (NULL);
 }
