@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/09 16:25:24 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/28 04:41:24 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/11/28 04:14:10 by vpluchar          #+#    #+#             */
+/*   Updated: 2016/11/28 04:15:53 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlen(const char *s)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	size_t	v;
-
-	v = 0;
-	while (s[v])
-		v++;
-	return (v);
+	while (lst != NULL)
+	{
+		f(lst);
+		lst = lst->next;
+	}
 }
