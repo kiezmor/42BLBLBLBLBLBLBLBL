@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 03:42:55 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/22 04:02:12 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/11/28 05:32:32 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 void	ft_strclr(char *s)
 {
-	int	i;
-
-	i = -1;
-	while (s[i++])
-		s[i] = '\0';
+	if (s)
+		ft_memset(s, 0, ft_strlen(s));
 }

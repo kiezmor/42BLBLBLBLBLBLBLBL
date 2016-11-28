@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 02:04:24 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/27 22:17:27 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/11/28 05:29:51 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,5 @@
 
 char	*ft_strnew(size_t size)
 {
-	char	*tmp;
-
-	tmp = (char *)malloc(sizeof(char *) * (size + 1));
-	if (!tmp)
-		return (NULL);
-	while (size + 1)
-	{
-		tmp[size] = 0;
-		size--;
-	}
-	return (tmp);
+	return ((char *)ft_memalloc(size + 1));
 }

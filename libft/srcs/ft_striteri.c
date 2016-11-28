@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 03:54:36 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/22 04:01:29 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/11/28 05:38:52 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	size_t	i;
 
+	if (!(s && f))
+		return ;
 	i = 0;
 	while (s[i])
 	{
