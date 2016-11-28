@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 00:24:07 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/29 00:05:30 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/11/29 00:09:11 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,18 @@ static int	ft_lenword(char *s, char c)
 
 char		**ft_strsplit(char const *s, char c)
 {
-	int		nbr1;
+	int		count;
 	char	**tab;
 	int		i;
 
 	if (!s)
 		return (NULL);
-	nbr1 = ft_countwords((char *)s, c);
-	tab = (char **)malloc((nbr1 + 1) * sizeof(char*));
+	count = ft_countwords((char *)s, c);
+	tab = (char **)malloc((count + 1) * sizeof(char*));
 	i = 0;
 	if (!tab)
 		return (NULL);
-	while (nbr1--)
+	while (count--)
 	{
 		while (*s == c && *s != '\0')
 			s++;
