@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 03:59:31 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/22 04:27:44 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/11/28 06:21:42 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,21 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	char			*tmp;
-	unsigned int	i;
+	char	*str;
+	size_t	i;
+	size_t	len;
 
+	if (!(s))
+		return (NULL);
 	i = 0;
-	tmp = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	len = ft_strlen(s) + 1;
+	if (!(str = (char *)malloc(sizeof(*str) * (len))))
+		return (NULL);
 	while (s[i])
 	{
-		tmp[i] = f(s[i]);
+		str[i] = f(s[i]);
 		i++;
 	}
-	tmp[i] = 0;
-	return (tmp);
+	str[i] = '\0';
+	return (str);
 }
