@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/15 22:26:31 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/22 01:52:40 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/11/28 02:02:54 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char *p;
+	char *p;
 
-	p = (unsigned char *)s;
+	p = (char *)s;
 	while (n--)
 	{
 		if (*p == c)
-			return (p);
+			return ((unsigned char *)p);
 		if (n)
 			p++;
 	}
