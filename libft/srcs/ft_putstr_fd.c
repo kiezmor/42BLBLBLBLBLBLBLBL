@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 05:14:43 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/28 23:27:31 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/11/29 00:52:35 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,12 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-	write(fd, s, ft_strlen((char *)s));
+	int	i;
+
+	i = 0;
+	while (s + i != NULL && s[i] != '\0')
+	{
+		ft_putchar_fd(s[i], fd);
+		i++;
+	}
 }

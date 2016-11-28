@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 04:56:07 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/25 05:06:45 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/11/29 00:54:51 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putendl(char const *s)
 {
-	write(1, s, ft_strlen(s));
-	write(1, "\n", 1);
+	ft_putstr(s);
+	ft_putstr("\n");
 }

@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 01:38:14 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/22 01:50:58 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/11/29 00:46:20 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_memdel(void **ap)
 {
+	if (!ap)
+		return ;
 	free(*ap);
 	*ap = (NULL);
 }
