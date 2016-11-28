@@ -6,69 +6,53 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 00:24:07 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/28 07:12:39 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/11/28 08:35:25 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_nbr(char *s, char c)
+static int		ft_nbwords(char const *s, char c)
 {
-	int		i;
-	int		nb;
+	size_t		nb;
 
-	i = 0;
 	nb = 0;
-	while (*s)
+	while (*s && s)
 	{
-		if (nb == 0 && *s != c)
-		{
-			nb = 1;
-			i++;
-		}
-		else if (nb == 1 && *s == c)
-			nb = 0;
-		s++;
+		while (*s == c)
+			s++;
+		if (*s)
+			nb++;
+		while (*s && *s != c)
+			s++;
 	}
-	return (i);
+	return (nb);
 }
 
-static int	ft_lenword(char *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
-	int		len;
-
-	len = 0;
-	while (*s != c && *s != '\0')
-	{
-		len++;
-		s++;
-	}
-	return (len);
-}
-
-char		**ft_strsplit(char const *s, char c)
-{
-	int		nbr1;
-	char	**tab;
-	int		i;
+	char		**str;
+	size_t		tmp;
+	size_t		i;
+	size_t		words;
 
 	if (!s)
 		return (NULL);
-	nbr1 = ft_nbr((char *)s, c);
-	tab = (char **)malloc((nbr1 + 1) * sizeof(char*));
 	i = 0;
-	if (!tab)
+	words = ft_nbwords(s, c);
+	if (!(str = (char **)malloc(sizeof(char *) * (words + 1))))
 		return (NULL);
-	while (nbr1--)
+	str[words] = NULL;
+	words = 0;
+	while (s[i])
 	{
-		while (*s == c && *s != '\0')
-			s++;
-		tab[i] = ft_strsub((char *)s, 0, ft_lenword((char *)s, c));
-		if (!tab[i])
-			return (0);
-		s = s + ft_lenword((char *)s, c);
-		i++;
+		while (s[i] == c)
+			i++;
+		tmp = i;
+		while (s[i] && s[i] != c)
+			i++;
+		if (tmp < i)
+			str[words++] = ft_strsub((s + tmp), 0, (i - tmp));
 	}
-	tab[i] = NULL;
-	return (tab);
+	return (str);
 }

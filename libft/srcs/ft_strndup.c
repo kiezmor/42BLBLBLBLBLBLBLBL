@@ -1,40 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 16:40:57 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/28 07:27:01 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/11/28 07:48:29 by vpluchar          #+#    #+#             */
+/*   Updated: 2016/11/28 08:08:58 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+char	*ft_strndup(const char *s, size_t n)
 {
-	int		v;
-	int		nbs;
-	int		neg;
+	char *tmp;
 
-	v = 0;
-	nbs = 0;
-	neg = 0;
-	while ((str[v] == ' ') || (str[v] >= 9 && str[v] <= 13))
-		v++;
-	if (str[v] == 45)
-		neg = 1;
-	if (str[v] == 45 || str[v] == 43)
-		v++;
-	while (str[v] >= 48 && str[v] <= 57)
-	{
-		nbs *= 10;
-		nbs += (str[v] - 48);
-		v++;
-	}
-	if (neg == 1)
-		return (-nbs);
-	else
-		return (nbs);
+	if (!(tmp = malloc(sizeof(char) * n + 1)))
+		return (NULL);
+	tmp = ft_strncpy(tmp, s, n);
+	return (tmp);
 }
