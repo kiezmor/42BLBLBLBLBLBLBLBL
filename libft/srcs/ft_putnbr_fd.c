@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 05:18:41 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/28 07:03:06 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/11/28 23:11:15 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (n < 0)
 	{
-		ft_putchar_fd(45, fd);
+		ft_putchar_fd('-', fd);
 		n = -n;
 	}
 	if (n >= 10)
