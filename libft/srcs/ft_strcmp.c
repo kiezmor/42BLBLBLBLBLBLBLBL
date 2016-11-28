@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 04:07:47 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/22 01:53:09 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/11/28 05:16:27 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,14 @@
 
 int		ft_strcmp(const char *s1, const char *s2)
 {
-	int v;
+	size_t	i;
 
-	v = 0;
-	while (s1[v] == s2[v] && s1[v] != '\0' && s2[v] != '\0')
-		v++;
-	return (s1[v] - s2[v]);
+	i = 0;
+	while (s1[i] || s2[i])
+	{
+		if (s1[i] > s2[i] || s1[i] < s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
+	}
+	return (0);
 }
