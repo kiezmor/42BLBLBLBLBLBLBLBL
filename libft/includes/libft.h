@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/17 00:10:07 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/28 23:00:12 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/11/30 23:51:56 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
-# include <stdio.h>
 
 typedef struct		s_list
 {
@@ -89,5 +88,7 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_isspace(int c);
 char				*ft_strndup(const char *s, size_t n);
 int					ft_countwords(char const *str, char c);
+size_t				ft_strlcpy(char *dst, const char *src, size_t size);
+char				*ft_strrev(char *str);
 
 #endif
