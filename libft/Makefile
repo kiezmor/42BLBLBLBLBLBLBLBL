@@ -6,7 +6,7 @@
 #    By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/16 05:28:33 by vpluchar          #+#    #+#              #
-#    Updated: 2016/11/28 23:00:20 by vpluchar         ###   ########.fr        #
+#    Updated: 2016/12/01 01:58:41 by vpluchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,8 @@ FILES=ft_atoi.c ft_isdigit.c ft_memalloc.c ft_memdel.c ft_putendl.c\
 	ft_strsplit.c ft_toupper.c ft_isascii.c ft_lstnew.c ft_memcpy.c\
 	ft_putchar_fd.c ft_putstr.c ft_strcmp.c ft_striter.c ft_strmap.c\
 	ft_strnequ.c ft_strstr.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c\
-	ft_lstiter.c ft_lstmap.c ft_strndup.c ft_countwords.c
+	ft_lstiter.c ft_lstmap.c ft_strndup.c ft_countwords.c ft_strlcpy.c\
+	ft_strrev.c ft_sqrt.c ft_range.c ft_fibonacci.c
 
 $(NAME) :
 	$(CC) $(CFLAGS) -c $(SRC) $ -I $(INCLUDES)

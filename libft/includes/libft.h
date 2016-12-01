@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/17 00:10:07 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/30 23:51:56 by vpluchar         ###   ########.fr       */
+/*   Updated: 2016/12/01 01:57:59 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,5 +90,8 @@ char				*ft_strndup(const char *s, size_t n);
 int					ft_countwords(char const *str, char c);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 char				*ft_strrev(char *str);
+int					ft_sqrt(int nb);
+int					*ft_range(int min, int max);
+int					ft_fibonacci(int index);
 
 #endif
