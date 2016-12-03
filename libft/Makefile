@@ -6,7 +6,7 @@
 #    By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/16 05:28:33 by vpluchar          #+#    #+#              #
-#    Updated: 2016/12/01 01:58:41 by vpluchar         ###   ########.fr        #
+#    Updated: 2016/12/03 04:39:11 by vpluchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,17 +32,20 @@ FILES=ft_atoi.c ft_isdigit.c ft_memalloc.c ft_memdel.c ft_putendl.c\
 	ft_lstiter.c ft_lstmap.c ft_strndup.c ft_countwords.c ft_strlcpy.c\
 	ft_strrev.c ft_sqrt.c ft_range.c ft_fibonacci.c
 
-$(NAME) :
-	$(CC) $(CFLAGS) -c $(SRC) $ -I $(INCLUDES)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+$(NAME): $(OBJ)
+	@ar rc $(NAME) $(OBJ)
+	@echo "Creation de la lib!"
+
+$(OBJ)%.o: $(SRC)
+	@$(CC) $(CFLAGS) -c $(SRC) $ -I $(INCLUDES)
+	@echo "Compilation!"
 
 all: $(NAME)
 
 clean: 
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
 
 fclean : clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
