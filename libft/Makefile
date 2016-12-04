@@ -6,7 +6,7 @@
 #    By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/16 05:28:33 by vpluchar          #+#    #+#              #
-#    Updated: 2016/12/03 04:39:11 by vpluchar         ###   ########.fr        #
+#    Updated: 2016/12/04 05:32:19 by vpluchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,9 @@ INCLUDES= ./includes/
 OBJ=$(FILES:.c=.o)
 SRC_DIR=srcs/
 SRC=$(addprefix $(SRC_DIR), $(FILES))
+
+_RED=$'\x1b[31m
+_GREEN=$'\x1b[32m
 
 FILES=ft_atoi.c ft_isdigit.c ft_memalloc.c ft_memdel.c ft_putendl.c\
 	ft_putstr_fd.c  ft_strcpy.c ft_striteri.c ft_strmapi.c ft_strnew.c\
@@ -33,19 +36,21 @@ FILES=ft_atoi.c ft_isdigit.c ft_memalloc.c ft_memdel.c ft_putendl.c\
 	ft_strrev.c ft_sqrt.c ft_range.c ft_fibonacci.c
 
 $(NAME): $(OBJ)
+	@echo "${_GREEN}Creation de la lib!"
 	@ar rc $(NAME) $(OBJ)
-	@echo "Creation de la lib!"
 
 $(OBJ)%.o: $(SRC)
+	@echo "${_GREEN}Compilation!"
 	@$(CC) $(CFLAGS) -c $(SRC) $ -I $(INCLUDES)
-	@echo "Compilation!"
 
 all: $(NAME)
 
 clean: 
+	@echo "${_RED}Supression des .o"
 	@rm -f $(OBJ)
 
 fclean : clean
+	@echo "${_RED}Supression de Libft.a"
 	@rm -f $(NAME)
 
 re: fclean all
