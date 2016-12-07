@@ -1,0 +1,111 @@
+@charset "utf-8";
+/** Debut header **/
+.header
+{
+	height: 100px;
+	background-color: #303030;
+}
+.logo
+{
+	width: 160px;
+	height: 160px;
+	top: 10px;
+	position: relative;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+/** Fin header **/
+/** Debut main **/
+@font-face
+{
+ font-family: HG; 
+ src: local('HG'), url("../fonts/HG.ttf") format('truetype'); 
+}
+body 
+{
+	font: 18px HG;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	background-size: 100%;
+	background-color: #555555;
+}
+ul, ol, dl 
+{
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;
+	padding-right: 15px;
+	padding-left: 15px;
+	letter-spacing: 2px;
+}
+a img 
+{
+	border: none;
+}
+ul
+{
+	list-style: none;
+}
+ul li
+{
+	padding: 5px 0;
+}
+.container 
+{
+	width: 76%;
+	max-width: 2000px;
+	min-width: 780px;
+	min-height: 1280px;
+	background-color: #606060;
+	margin: 0 auto;
+	color: #FFF;
+}
+.content 
+{
+	position: relative;
+	top: 100px;
+	padding: 10px 0;
+	text-align: center;
+}
+.content ul, .content ol 
+{ 
+	padding: 0 15px 15px 40px;
+}
+/** Fin main **/
+/** Debut button **/
+.button
+{
+	top: 20px;
+	position: relative;
+	background-color: #555555;
+	border: solid #FFF 2px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 40px;
+}
+.button:active
+{
+	background-color: #FFF;
+	border: solid #000 2px;
+	color: black;
+}
+/** Fin button **/
+/** Debut footer **/
+.footer 
+{
+	padding: 10px 0;
+	height: 20px;
+	background-color: #303030;
+	color: #FFF;
+	font-size: 10px;
+	text-align: end;
+}
+/** Fin footer **/

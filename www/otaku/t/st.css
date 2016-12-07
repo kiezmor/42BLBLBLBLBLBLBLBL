@@ -1,0 +1,58 @@
+@charset "utf-8";
+#grid {
+  width: 982px; /* same as sprite */
+  padding: 0;
+  margin: 0 0 440px 0; /* 420 + 20 margin bottom */
+  /* the following 3 directives not needed if the playlist is below the player from the start */
+  -webkit-transition: margin .8s;
+  -moz-transition: margin .8s;
+  transition: margin .8s;
+}
+#grid.is-splash {
+  margin: 0;
+}
+#grid.is-splash .fp-ui {
+  display: none;
+}
+
+/* playlist as grid */
+#grid .fp-playlist {
+  z-index: 12; /* overlay the UI */
+  background: #fff url(//flowplayer.org/media/img/demos/playlist/grid.jpg) center no-repeat;
+  /* 982 not divisible by 4, so 980 + 1px padding each side */
+  padding: 0 1px;
+  position: absolute;
+  left: 0;
+  bottom: -440px; /* -420 - 20 */
+  /* the following 3 directives not needed if the playlist is below the player from the start */
+  -webkit-transition: all .8s;
+  -moz-transition: all .8s;
+  transition: all .8s;
+}
+#grid.is-splash .fp-playlist {
+  padding: 66px 1px; /* (980 / 16 * 9 - 420) / 2 = 65.625 */
+  bottom: 0;
+}
+
+/* the playlist item elements */
+#grid .fp-playlist a {
+  width: 245px;  /* 980 / 4 */
+  height: 140px; /* 420 / 3 */
+  display: inline-block;
+}
+#grid .fp-playlist a.is-active, #grid .fp-playlist a:hover {
+  background-image: url(//releases.flowplayer.org/6.0.5/skin/img/play_white.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  #grid .fp-playlist a.is-active, #grid .fp-playlist a:hover {
+    background-image: url(//releases.flowplayer.org/6.0.5/skin/img/play_white@x2.png);
+  }
+}
+#grid .fp-playlist a:hover {
+  background-size: 12%;
+}
+#grid .fp-playlist a.is-active {
+  background-size: 20%;
+}
