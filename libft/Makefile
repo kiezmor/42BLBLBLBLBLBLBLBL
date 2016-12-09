@@ -6,7 +6,7 @@
 #    By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/16 05:28:33 by vpluchar          #+#    #+#              #
-#    Updated: 2016/12/04 05:32:19 by vpluchar         ###   ########.fr        #
+#    Updated: 2016/12/09 01:00:03 by vpluchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ CFLAGS=-Wall -Wextra -Werror
 INCLUDES= ./includes/
 OBJ=$(FILES:.c=.o)
 SRC_DIR=srcs/
+O_DIR=o/
 SRC=$(addprefix $(SRC_DIR), $(FILES))
 
 _RED=$'\x1b[31m
