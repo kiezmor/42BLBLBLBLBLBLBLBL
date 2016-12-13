@@ -33,31 +33,26 @@ void	ft_swap(char **a, char **b)
 	*b = tmp;
 }
 
-void	ft_print(char *ar)
-{
-	while (*ar)
-		ft_putchar(*(ar++));
-}
-
-int		main(int argc, char **argv)
+int		main(int ac, char **av)
 {
 	int v;
 
 	v = 0;
-	while (v < argc - 1)
+	while (v < ac - 1)
 	{
-		if (ft_strcmp(argv[v], argv[v + 1]) > 0)
+		if (ft_strcmp(av[v], av[v + 1]) > 0)
 		{
-			ft_swap(&argv[v], &argv[v + 1]);
+			ft_swap(&av[v], &av[v + 1]);
 			v = 1;
 		}
 		else
 			v++;
 	}
 	v = 1;
-	while (v < argc)
+	while (v < ac)
 	{
-		ft_print(argv[v]);
+		while (av[v])
+			ft_putchar(av[v++]);
 		ft_putchar('\n');
 		v++;
 	}

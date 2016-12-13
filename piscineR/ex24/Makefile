@@ -6,7 +6,7 @@
 #    By: vpluchar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 16:39:12 by vpluchar          #+#    #+#              #
-#    Updated: 2016/11/05 18:27:44 by vpluchar         ###   ########.fr        #
+#    Updated: 2016/11/05 18:38:56 by vpluchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ all: $(NAME)
 
 $(NAME):
 				$(CC) -c $(SRCS) $(CFLAGS) -I $(HEADER)
-				$(CC) $(OBJ) -o $(NAME)
+				ar rc  $(NAME) $(OBJ)
 clean:
 				rm -f $(OBJ)
 fclean: clean
