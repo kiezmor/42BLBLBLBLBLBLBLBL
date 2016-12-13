@@ -3,3 +3,7 @@
 This repositorie contains all my 42 projects.
 
 * [Piscine C](/42piscinec)
+* [Piscine Reloaded](/piscineR)
+* [Libft](/libft)
+* [Fillit *(WIP)*](/Fillitt)
+* [Get Next Line *(WIP)*](/GNL)
