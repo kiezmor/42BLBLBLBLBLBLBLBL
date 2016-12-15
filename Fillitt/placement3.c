@@ -6,7 +6,7 @@
 /*   By: chle-van <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/03 06:16:06 by chle-van          #+#    #+#             */
-/*   Updated: 2016/12/12 23:36:53 by chle-van         ###   ########.fr       */
+/*   Updated: 2016/12/14 05:22:19 by chle-van         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int		ft_p14(char **tab, int i, int j, t_piece *piece, int size)
 	char t;
 	char p;
 
-	t = ft_diez(piece->place);
-	p = ft_dot(piece->place);
+	t = ft_diez(piece);
+	p = ft_dot(piece);
 	if (piece->type != 14)
 		return (ft_p15(tab, i, j, piece, size));
 	while (j <= size - piece->l)
@@ -46,8 +46,8 @@ int		ft_p15(char **tab, int i, int j, t_piece *piece, int size)
 	char t;
 	char p;
 
-	t = ft_diez(piece->place);
-	p = ft_dot(piece->place);
+	t = ft_diez(piece);
+	p = ft_dot(piece);
 	if (piece->type != 15)
 		return (ft_p16(tab, i, j, piece, size));
 	while (j <= size - piece->l)
@@ -75,13 +75,13 @@ int		ft_p16(char **tab, int i, int j, t_piece *piece, int size)
 	char t;
 	char p;
 
-	t = ft_diez(piece->place);
-	p = ft_dot(piece->place);
+	t = ft_diez(piece);
+	p = ft_dot(piece);
 	if (piece->type != 16)
 		return (ft_p17(tab, i, j, piece, size));
 	while (j <= size - piece->l)
 	{
-		while (i <= size - piece->h)
+		while (i <= size - piece->h && j)
 		{
 			if (tab[i][j] == t && tab[i + 1][j] == t && tab[i + 2][j] == t && tab[i + 2][j - 1] == t)
 			{
@@ -104,8 +104,8 @@ int		ft_p17(char **tab, int i, int j, t_piece *piece, int size)
 	char t;
 	char p;
 
-	t = ft_diez(piece->place);
-	p = ft_dot(piece->place);
+	t = ft_diez(piece);
+	p = ft_dot(piece);
 	if (piece->type != 17)
 		return (ft_p18(tab, i, j, piece, size));
 	while (j <= size - piece->l)
@@ -133,8 +133,8 @@ int		ft_p18(char **tab, int i, int j, t_piece *piece, int size)
 	char t;
 	char p;
 
-	t = ft_diez(piece->place);
-	p = ft_dot(piece->place);
+	t = ft_diez(piece);
+	p = ft_dot(piece);
 	if (piece->type != 18)
 		return (0);
 	while (j <= size - piece->l)

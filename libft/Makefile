@@ -6,7 +6,7 @@
 #    By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/16 05:28:33 by vpluchar          #+#    #+#              #
-#    Updated: 2016/12/09 01:00:03 by vpluchar         ###   ########.fr        #
+#    Updated: 2016/12/14 03:55:13 by vpluchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,8 +19,9 @@ SRC_DIR=srcs/
 O_DIR=o/
 SRC=$(addprefix $(SRC_DIR), $(FILES))
 
-_RED=$'\x1b[31m
-_GREEN=$'\x1b[32m
+_RED=\x1b[31m
+_GREEN=\x1b[32m
+_NO_COLOR=\x1b[0m
 
 FILES=ft_atoi.c ft_isdigit.c ft_memalloc.c ft_memdel.c ft_putendl.c\
 	ft_putstr_fd.c  ft_strcpy.c ft_striteri.c ft_strmapi.c ft_strnew.c\
@@ -37,21 +38,21 @@ FILES=ft_atoi.c ft_isdigit.c ft_memalloc.c ft_memdel.c ft_putendl.c\
 	ft_strrev.c ft_sqrt.c ft_range.c ft_fibonacci.c
 
 $(NAME): $(OBJ)
-	@echo "${_GREEN}Creation de la lib!"
+	@echo "${_GREEN}Creation de la lib!${_NO_COLOR}"
 	@ar rc $(NAME) $(OBJ)
 
 $(OBJ)%.o: $(SRC)
-	@echo "${_GREEN}Compilation!"
+	@echo "${_GREEN}Compilation!${_NO_COLOR}"
 	@$(CC) $(CFLAGS) -c $(SRC) $ -I $(INCLUDES)
 
 all: $(NAME)
 
 clean: 
-	@echo "${_RED}Supression des .o"
+	@echo "${_RED}Supression des .o${_NO_COLOR}"
 	@rm -f $(OBJ)
 
 fclean : clean
-	@echo "${_RED}Supression de Libft.a"
+	@echo "${_RED}Supression de Libft.a${_NO_COLOR}"
 	@rm -f $(NAME)
 
 re: fclean all

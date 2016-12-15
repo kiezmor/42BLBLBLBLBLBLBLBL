@@ -6,7 +6,7 @@
 /*   By: chle-van <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 03:58:26 by chle-van          #+#    #+#             */
-/*   Updated: 2016/12/12 06:55:29 by chle-van         ###   ########.fr       */
+/*   Updated: 2016/12/14 05:04:53 by chle-van         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_readtet(int fd)
 		return (NULL);
 	if (read(fd, buff, BUFF_S + 1) >= 20)
 	{
-		ft_putstr("lu\n");
+//		ft_putstr("lu\n");
 		return (buff);
 	}
 	return (NULL);
@@ -80,9 +80,10 @@ void	ft_fillit(int fd)
 	map = NULL;
 	list = ft_input(fd);
 	size = ft_opt_size(list);
-	ft_putstr("taille min = ");
-	ft_putstr(ft_itoa(size));
-	ft_putchar('\n');
+//	ft_putstr("taille min = ");
+//	ft_putstr(ft_itoa(size));
+//	ft_putchar('\n');
+	ft_listletter(list);
 	while (1)
 	{
 		map = ft_newmap(size);
@@ -91,7 +92,7 @@ void	ft_fillit(int fd)
 		{
 			tmp = list;
 			size++;
-				ft_putstr("RAZ/n");
+//				ft_putstr("RAZ/n");
 			while (tmp)
 			{
 				tmp->place = 0;
@@ -99,6 +100,9 @@ void	ft_fillit(int fd)
 			}
 		}
 		else
+		{
+			ft_displaytab(map, size);
 			return ;
+		}
 	}
 }

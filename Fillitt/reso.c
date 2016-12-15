@@ -6,7 +6,7 @@
 /*   By: chle-van <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/04 03:26:01 by chle-van          #+#    #+#             */
-/*   Updated: 2016/12/13 07:46:11 by chle-van         ###   ########.fr       */
+/*   Updated: 2016/12/14 06:20:45 by chle-van         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,20 @@ int		ft_res(t_piece *list, char **map, int size)
 	{
 		if (!tmp->place)
 		{
-			ft_putnbr(tmp->type);
-			ft_putstr("pas place\n");
+//			ft_putnbr(tmp->type);
+//			ft_putstr("pas place\n");
 			if (ft_tplace(map, tmp, size))
 			{
 				if(!ft_res(list, map, size))
-					return (0);
-				ft_tplace(map, tmp, size);
+				{
+					ft_tplace(map, tmp, size);
+				}
 			}
 		}
 		tmp = tmp->next;
 	}
+	if (ft_allpl(list))
+		return (1);
 	return (0);
 }
 
@@ -45,25 +48,15 @@ int		ft_tplace(char **map, t_piece *piece, int size)
 	i = 0;
 	j = 0;
 
-	//	while (j <= size - piece->l)
-	//	{
-	//		while (i <= size - piece->h)
-	//		{
-	//			if (map[i][j] == '.')
 	if (ft_p00(map, 0, 0, piece, size))
 	{
-		ft_putnbr(piece->type);
-		ft_putstr("place = 1\n");
-		ft_displaytab(map, size);
+//		ft_putnbr(piece->type);
+//		ft_putstr("place = 1\n");
 		if (!piece->place)
 			piece->place = 1;
 		else
 			piece->place = 0;
 		return (1);
 	}
-	//			i++;
-	//		}
-	//		j++;
-	//	}
 	return (0);
 }

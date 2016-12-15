@@ -6,7 +6,7 @@
 /*   By: chle-van <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 07:58:11 by chle-van          #+#    #+#             */
-/*   Updated: 2016/12/07 09:04:30 by chle-van         ###   ########.fr       */
+/*   Updated: 2016/12/14 05:00:42 by chle-van         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_piece	*ft_d14(char **p, char c)
 
 	i = 1;
 	j = 0;
-	ft_putstr("test type 14\n");
+//	ft_putstr("test type 14\n");
 	while (j < 2)
 	{
 		while (i < 3)
@@ -51,7 +51,7 @@ t_piece	*ft_d15(char **p, char c)
 
 	i = 1;
 	j = 0;
-	ft_putstr("test type 15\n");
+//	ft_putstr("test type 15\n");
 	while (j < 2)
 	{
 		while (i < 3)
@@ -82,7 +82,7 @@ t_piece	*ft_d16(char **p, char c)
 
 	i = 1;
 	j = 0;
-	ft_putstr("test type 16\n");
+//	ft_putstr("test type 16\n");
 	while (j < 2)
 	{
 		while (i < 3)
@@ -143,7 +143,7 @@ t_piece	*ft_d18(char **p, char c)
 
 	i = 0;
 	j = 0;
-	ft_putstr("test type 18\n");
+//	ft_putstr("test type 18\n");
 	while (j < 2)
 	{
 		while (i < 3)

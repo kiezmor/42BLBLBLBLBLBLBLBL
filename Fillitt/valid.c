@@ -6,7 +6,7 @@
 /*   By: chle-van <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 07:58:11 by chle-van          #+#    #+#             */
-/*   Updated: 2016/12/12 04:46:33 by chle-van         ###   ########.fr       */
+/*   Updated: 2016/12/14 05:04:13 by chle-van         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,26 +23,23 @@ t_piece	*ft_tetvalid(char *c)
 	tab = NULL;
 	i = 0;
 	hash = 0;
-	ft_putstr("tetvalid :\n");
-	ft_putstr(c);
+//	ft_putstr("tetvalid :\n");
+//	ft_putstr(c);
 	while (i < 20 && c[i])
 	{
 		if ((c[i] != '#' && c[i] != '.' && c[i] != '\n') || (c[4 + (i * 5)] != '\n' && i < 4))
-		{
-			printf("bug i = %d",i);
 			return (NULL);
-		}
 		if (c[i] == '#')
 			hash++;
 		i++;
 	}
-	ft_putstr("format valide\n");
+//	ft_putstr("format valide\n");
 	if (hash != 4)
 		return (NULL);
 	if (c[i] == '\n' || c[i] == '\0')
 	{
 		tab = ft_strsplit(c, '\n');
-		ft_putstr("4# ok\n");
+//		ft_putstr("4# ok\n");
 	}
 	return (ft_detect(tab));
 }
@@ -89,4 +86,19 @@ int		ft_allpl(t_piece *list)
 		list = list->next;
 	}
 		return (1);
+}
+
+void	ft_listletter(t_piece *list)
+{
+	t_piece	*tmp;
+	int 	i;
+
+	i = 0;
+	tmp = list;
+	while (tmp)
+	{
+		tmp->letter = 'A' + i;
+		tmp = tmp->next;
+		i++;
+	}
 }

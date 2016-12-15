@@ -6,7 +6,7 @@
 /*   By: chle-van <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 03:59:16 by chle-van          #+#    #+#             */
-/*   Updated: 2016/12/13 04:44:25 by chle-van         ###   ########.fr       */
+/*   Updated: 2016/12/14 03:56:45 by chle-van         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,8 @@ int					ft_allpl(t_piece *list);
 int					ft_opt_size(t_piece *list);
 int					ft_tplace(char **map, t_piece *piece, int size);
 char				**ft_newmap(int size);
-char				ft_dot(int place);
-char				ft_diez(int place);
+char				ft_dot(t_piece *piece);
+char				ft_diez(t_piece *piece);
 void				ft_fillit(int fd);
 int					ft_p00(char **tab, int i, int j, t_piece *piece, int c);
 int					ft_p01(char **tab, int i, int j, t_piece *piece, int c);
@@ -81,5 +81,6 @@ int					ft_p17(char **tab, int i, int j, t_piece *piece, int c);
 int					ft_p18(char **tab, int i, int j, t_piece *piece, int c);
 void				ft_ladd(t_piece *list, t_piece *add);
 void				ft_displaytab(char **tab, int size);
+void				ft_listletter(t_piece *piece);
 int					ft_res(t_piece *list, char **map, int size);
 #endif

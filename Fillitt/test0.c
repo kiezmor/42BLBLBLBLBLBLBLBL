@@ -6,7 +6,7 @@
 /*   By: chle-van <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 07:58:11 by chle-van          #+#    #+#             */
-/*   Updated: 2016/12/13 07:08:06 by chle-van         ###   ########.fr       */
+/*   Updated: 2016/12/14 05:01:41 by chle-van         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ t_piece	*ft_detect(char **tab)
 
 	res = ft_d00(tab, '#');
 	res->place = 0;
-	ft_putstr("type -->");
-	ft_putnbr(res->type);
-	ft_putstr("\n\n");
+//	ft_putstr("type -->");
+//	ft_putnbr(res->type);
+//	ft_putstr("\n\n");
 	return (res);
 }
 
@@ -33,7 +33,7 @@ t_piece	*ft_d00(char **p, char c)
 	i = 0;
 	j = 0;
 
-		ft_putstr("test type 0\n");
+//		ft_putstr("test type 0\n");
 	while (i < 4)
 	{
 		while (j < 4 && p[j][i] == c)
@@ -62,7 +62,7 @@ t_piece	*ft_d01(char **p, char c)
 	i = 0;
 	j = 0;
 	maillon = NULL;
-		ft_putstr("test type 1\n");
+//		ft_putstr("test type 1\n");
 	while (i < 4)
 	{
 		while (j < 4 && p[i][j] == c)
@@ -90,7 +90,7 @@ t_piece	*ft_d02(char **p, char c)
 
 	i = 0;
 	j = 0;
-		ft_putstr("test type 2\n");
+//		ft_putstr("test type 2\n");
 	while (j < 3)
 	{
 		while (i < 3)
@@ -119,12 +119,12 @@ t_piece	*ft_d03(char **p, char c)
 	int		j;
 	t_piece	*maillon;
 
-		ft_putstr("test type 3\n");
+//		ft_putstr("test type 3\n");
 	i = 0;
 	j = 0;
-	while (j < 4)
+	while (j < 3)
 	{
-		while (i < 4)
+		while (i < 2)
 		{
 			if (p[j][i] == c && p[j][i + 1] == c && p[j][i + 2] == c &&
 					p[j + 1][i + 2] == c)
