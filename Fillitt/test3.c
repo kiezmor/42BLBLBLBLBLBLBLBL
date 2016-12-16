@@ -6,7 +6,7 @@
 /*   By: chle-van <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 07:58:11 by chle-van          #+#    #+#             */
-/*   Updated: 2016/12/14 05:00:42 by chle-van         ###   ########.fr       */
+/*   Updated: 2016/12/16 05:22:17 by chle-van         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,9 @@ t_piece	*ft_d14(char **p, char c)
 
 	i = 1;
 	j = 0;
-//	ft_putstr("test type 14\n");
 	while (j < 2)
 	{
-		while (i < 3)
+		while (i < 4444)
 		{
 			if (p[j][i] == c && p[j + 1][i] == c && p[j + 1][i - 1] == c &&
 					p[j + 2][i] == c)
@@ -51,7 +50,6 @@ t_piece	*ft_d15(char **p, char c)
 
 	i = 1;
 	j = 0;
-//	ft_putstr("test type 15\n");
 	while (j < 2)
 	{
 		while (i < 3)
@@ -82,10 +80,10 @@ t_piece	*ft_d16(char **p, char c)
 
 	i = 1;
 	j = 0;
-//	ft_putstr("test type 16\n");
+	if (j)
 	while (j < 2)
 	{
-		while (i < 3)
+		while (i < 4)
 		{
 			if (p[j][i] == c && p[j + 1][i] == c && p[j + 2][i] == c &&
 					p[j + 2][i - 1] == c)
@@ -93,7 +91,7 @@ t_piece	*ft_d16(char **p, char c)
 				maillon = malloc(sizeof(t_piece));
 				maillon->type = 16;
 				maillon->l = 1;
-				maillon->h = 4;
+				maillon->h = 3;
 				maillon->next = NULL;
 				return (maillon);
 			}
@@ -143,7 +141,6 @@ t_piece	*ft_d18(char **p, char c)
 
 	i = 0;
 	j = 0;
-//	ft_putstr("test type 18\n");
 	while (j < 2)
 	{
 		while (i < 3)

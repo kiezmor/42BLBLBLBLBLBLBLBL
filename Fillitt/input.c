@@ -6,7 +6,7 @@
 /*   By: chle-van <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 03:58:26 by chle-van          #+#    #+#             */
-/*   Updated: 2016/12/16 00:56:46 by chle-van         ###   ########.fr       */
+/*   Updated: 2016/12/16 05:38:43 by chle-van         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,10 +82,16 @@ void	ft_fillit(int fd)
 	//	ft_putstr(ft_itoa(size));
 	//	ft_putchar('\n');
 	ft_listletter(list);
+	while (list)
+	{
+		ft_putnbr(list->type);
+	list = list->next;
+	}
+	return ;
 	while (1)
 	{
 		map = ft_newmap(size);
-		ft_res(list, map, size);
+		ft_res(list, map, size, 0, 0);
 		if (!ft_allpl(list))
 		{
 			free(map);

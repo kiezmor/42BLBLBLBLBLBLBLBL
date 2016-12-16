@@ -6,7 +6,7 @@
 /*   By: chle-van <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 07:58:11 by chle-van          #+#    #+#             */
-/*   Updated: 2016/12/16 00:55:53 by chle-van         ###   ########.fr       */
+/*   Updated: 2016/12/16 05:23:41 by chle-van         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ t_piece	*ft_d00(char **p, char c)
 	i = 0;
 	j = 0;
 
-//		ft_putstr("test type 0\n");
 	while (i < 4)
 	{
 		while (j < 4 && p[j][i] == c)
@@ -59,7 +58,6 @@ t_piece	*ft_d01(char **p, char c)
 	i = 0;
 	j = 0;
 	maillon = NULL;
-//		ft_putstr("test type 1\n");
 	while (i < 4)
 	{
 		while (j < 4 && p[i][j] == c)
@@ -87,7 +85,6 @@ t_piece	*ft_d02(char **p, char c)
 
 	i = 0;
 	j = 0;
-//		ft_putstr("test type 2\n");
 	while (j < 3)
 	{
 		while (i < 3)
@@ -116,7 +113,6 @@ t_piece	*ft_d03(char **p, char c)
 	int		j;
 	t_piece	*maillon;
 
-//		ft_putstr("test type 3\n");
 	i = 0;
 	j = 0;
 	while (j < 3)
@@ -128,7 +124,7 @@ t_piece	*ft_d03(char **p, char c)
 			{
 				maillon = malloc(sizeof(t_piece));
 				maillon->type = 3;
-				maillon->l = 2;
+				maillon->l = 3;
 				maillon->h = 2;
 				maillon->next = NULL;
 				return (maillon);

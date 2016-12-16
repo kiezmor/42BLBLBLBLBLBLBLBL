@@ -6,7 +6,7 @@
 /*   By: chle-van <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 07:58:11 by chle-van          #+#    #+#             */
-/*   Updated: 2016/12/14 05:00:25 by chle-van         ###   ########.fr       */
+/*   Updated: 2016/12/16 05:22:41 by chle-van         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ t_piece	*ft_d09(char **p, char c)
 
 	i = 0;
 	j = 0;
-//	ft_putstr("test type 9\n");
 	while (j < 2)
 	{
 		while (i < 3)
@@ -51,17 +50,16 @@ t_piece	*ft_d10(char **p, char c)
 
 	i = 1;
 	j = 0;
-//	ft_putstr("test type 10\n");
 	while (j < 2)
 	{
-		while (i < 3)
+		while (i < 4)
 		{
 			if (p[j][i] == c && p[j + 1][i] == c && p[j + 1][i - 1] == c &&
 					p[j + 2][i - 1] == c)
 			{
 				maillon = malloc(sizeof(t_piece));
 				maillon->type = 10;
-				maillon->l = 2;
+				maillon->l = 1;
 				maillon->h = 3;
 				maillon->next = NULL;
 				return (maillon);
@@ -82,7 +80,6 @@ t_piece	*ft_d11(char **p, char c)
 
 	i = 0;
 	j = 0;
-//	ft_putstr("test type 11\n");
 	while (j < 4)
 	{
 		while (i < 4)
@@ -113,7 +110,6 @@ t_piece	*ft_d12(char **p, char c)
 
 	i = 0;
 	j = 0;
-//	ft_putstr("test type 12\n");
 	while (j < 2)
 	{
 		while (i < 3)
@@ -144,7 +140,6 @@ t_piece	*ft_d13(char **p, char c)
 
 	i = 1;
 	j = 0;
-//	ft_putstr("test type 13\n");
 	while (j < 3)
 	{
 		while (i < 3)
@@ -154,8 +149,8 @@ t_piece	*ft_d13(char **p, char c)
 			{
 				maillon = malloc(sizeof(t_piece));
 				maillon->type = 13;
-				maillon->l = 2;
-				maillon->h = 3;
+				maillon->l = 3;
+				maillon->h = 2;
 				maillon->next = NULL;
 				return (maillon);
 			}
