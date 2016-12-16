@@ -23,7 +23,7 @@ NAME=fillit
 all:$(NAME)
 
 $(NAME):$(OBJ_NAME)
-	$(CC) $(FLAGS) $(SRC) ./libft42/src/*.c -I libft42/includes/ -o $@
+	$(CC) $(FLAGS) $(SRC) ./libft42/srcs/*.c -I libft42/includes/ -o $@
 
 
 re:fclean all
