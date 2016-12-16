@@ -6,7 +6,7 @@
 /*   By: chle-van <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 07:58:11 by chle-van          #+#    #+#             */
-/*   Updated: 2016/12/14 05:32:27 by chle-van         ###   ########.fr       */
+/*   Updated: 2016/12/15 23:25:49 by chle-van         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,14 @@ t_piece	*ft_d04(char **p, char c)
 			{
 				maillon = malloc(sizeof(t_piece));
 				maillon->type = 4;
-				maillon->l = 3;
+				maillon->l = 1;
 				maillon->h = 2;
 				maillon->next = NULL;
 				return (maillon);
 			}
 			i++;
 		}
-		i = 0;
+		i = 2;
 		j++;
 	}
 	return (ft_d05(p, c));

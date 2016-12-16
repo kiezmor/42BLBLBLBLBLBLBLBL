@@ -6,7 +6,7 @@
 /*   By: chle-van <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 03:58:26 by chle-van          #+#    #+#             */
-/*   Updated: 2016/12/14 05:04:53 by chle-van         ###   ########.fr       */
+/*   Updated: 2016/12/16 00:56:46 by chle-van         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,7 @@ char	*ft_readtet(int fd)
 	if (!(buff = malloc(sizeof(char *) * 22)))
 		return (NULL);
 	if (read(fd, buff, BUFF_S + 1) >= 20)
-	{
-//		ft_putstr("lu\n");
 		return (buff);
-	}
 	return (NULL);
 }
 
@@ -46,10 +43,11 @@ t_piece	*ft_input(int fd)
 				ft_ladd(list, tmp);
 			else
 				return (NULL);
+			i++;
 		}
-		if (ft_strlen(buff) == 20 && ( tmp = ft_tetvalid(buff)))
+		if (ft_strlen(buff) == 20)
 		{
-			ft_ladd(list, tmp);
+			ft_ladd(list,ft_tetvalid(buff));
 			return (list);
 		}
 	}
@@ -80,9 +78,9 @@ void	ft_fillit(int fd)
 	map = NULL;
 	list = ft_input(fd);
 	size = ft_opt_size(list);
-//	ft_putstr("taille min = ");
-//	ft_putstr(ft_itoa(size));
-//	ft_putchar('\n');
+	//	ft_putstr("taille min = ");
+	//	ft_putstr(ft_itoa(size));
+	//	ft_putchar('\n');
 	ft_listletter(list);
 	while (1)
 	{
@@ -90,9 +88,9 @@ void	ft_fillit(int fd)
 		ft_res(list, map, size);
 		if (!ft_allpl(list))
 		{
+			free(map);
 			tmp = list;
 			size++;
-//				ft_putstr("RAZ/n");
 			while (tmp)
 			{
 				tmp->place = 0;

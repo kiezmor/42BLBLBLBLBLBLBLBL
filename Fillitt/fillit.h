@@ -6,7 +6,7 @@
 /*   By: chle-van <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 03:59:16 by chle-van          #+#    #+#             */
-/*   Updated: 2016/12/14 03:56:45 by chle-van         ###   ########.fr       */
+/*   Updated: 2016/12/15 20:01:00 by chle-van         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ t_piece				*ft_d17(char **p, char c);
 t_piece				*ft_d18(char **p, char c);
 int					ft_allpl(t_piece *list);
 int					ft_opt_size(t_piece *list);
-int					ft_tplace(char **map, t_piece *piece, int size);
+int					ft_tplace(char **map, t_piece *piece, int size, int i, int j);
 char				**ft_newmap(int size);
 char				ft_dot(t_piece *piece);
 char				ft_diez(t_piece *piece);

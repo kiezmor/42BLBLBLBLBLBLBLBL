@@ -6,7 +6,7 @@
 /*   By: chle-van <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 07:58:11 by chle-van          #+#    #+#             */
-/*   Updated: 2016/12/14 05:01:41 by chle-van         ###   ########.fr       */
+/*   Updated: 2016/12/16 00:55:53 by chle-van         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,6 @@ t_piece	*ft_detect(char **tab)
 
 	res = ft_d00(tab, '#');
 	res->place = 0;
-//	ft_putstr("type -->");
-//	ft_putnbr(res->type);
-//	ft_putstr("\n\n");
 	return (res);
 }
 

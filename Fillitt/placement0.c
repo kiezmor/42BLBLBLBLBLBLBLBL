@@ -6,7 +6,7 @@
 /*   By: chle-van <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/03 06:16:06 by chle-van          #+#    #+#             */
-/*   Updated: 2016/12/14 05:05:30 by chle-van         ###   ########.fr       */
+/*   Updated: 2016/12/15 22:06:22 by chle-van         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,14 @@ int		ft_p00(char **tab, int i, int j, t_piece *piece, int size)
 {
 	char t;
 	char p;
-	t = ft_diez(piece);
-//	ft_displaytab(tab, size);
-		p = ft_dot(piece);
 	if (piece->type != 0)
 		return (ft_p01(tab, i, j, piece, size));
-	while (j <= size - piece->l)
-	{
-		while (i <= size - piece->h)
-		{
+	t = ft_diez(piece);
+	p = ft_dot(piece);
+//	while (j <= size - piece->l)
+//	{
+//		while (i <= size - piece->h)
+//		{
 			if (tab[i][j] == t && tab[i + 1][j] == t && tab[i + 2][j] == t && tab[i + 3][j] == t)
 			{
 				tab[i][j] = p;
@@ -49,11 +48,11 @@ int		ft_p00(char **tab, int i, int j, t_piece *piece, int size)
 				tab[i + 3][j] = p;
 				return (1);
 			}
-			i++;
-		}
-		j++;
-		i = 0;
-	}
+//			i++;
+//		}
+//		j++;
+//		i = 0;
+//	}
 	return (0);
 }
 
@@ -62,14 +61,14 @@ int		ft_p01(char **tab, int i, int j, t_piece *piece, int size)
 	char t;
 	char p;
 
-	t = ft_diez(piece);
-	p = ft_dot(piece);
 	if (piece->type != 1)
 		return (ft_p02(tab, i, j, piece, size));
-	while (j <= size - piece->l)
-	{
-		while (i <= size - piece->h)
-		{
+	t = ft_diez(piece);
+	p = ft_dot(piece);
+//	while (j <= size - piece->l)
+//	{
+//		while (i <= size - piece->h)
+//		{
 			if (tab[i][j] == t && tab[i][j + 1] == t && tab[i][j + 2] == t && tab[i][j + 3] == t)
 			{
 				tab[i][j] = p;
@@ -78,11 +77,11 @@ int		ft_p01(char **tab, int i, int j, t_piece *piece, int size)
 				tab[i][j + 3] = p;
 				return (1);
 			}
-			i++;
-		}
-		j++;
-		i = 0;
-	}
+//			i++;
+//		}
+//		j++;
+//		i = 0;
+//	}
 		return (0);
 }
 
@@ -91,14 +90,14 @@ int		ft_p02(char **tab, int i, int j, t_piece *piece, int size)
 	char t;
 	char p;
 
-	t = ft_diez(piece);
-	p = ft_dot(piece);
 	if (piece->type != 2)
 		return (ft_p03(tab, i, j, piece, size));
-	while (j <= size - piece->l)
-	{
-		while (i <= size - piece->h)
-		{
+	t = ft_diez(piece);
+	p = ft_dot(piece);
+//	while (j <= size - piece->l)
+//	{
+//		while (i <= size - piece->h)
+//		{
 			if (tab[i][j] == t && tab[i][j + 1] == t && tab[i + 1][j] == t && tab[i + 1][j + 1] == t)
 			{
 				tab[i][j] = p;
@@ -107,11 +106,11 @@ int		ft_p02(char **tab, int i, int j, t_piece *piece, int size)
 				tab[i + 1][j + 1] = p;
 				return (1);
 			}
-			i++;
-		}
-		j++;
-		i = 0;
-	}
+//			i++;
+//		}
+//		j++;
+//		i = 0;
+//	}
 		return (0);
 }
 
@@ -120,14 +119,14 @@ int		ft_p03(char **tab, int i, int j, t_piece *piece, int size)
 	char t;
 	char p;
 
-	t = ft_diez(piece);	
-	p = ft_dot(piece);
 	if (piece->type != 3)
 		return (ft_p04(tab, i, j, piece, size));
-	while (j <= size - piece->l)
-	{
-		while (i <= size - piece->h)
-		{
+	t = ft_diez(piece);	
+	p = ft_dot(piece);
+//	while (j <= size - piece->l)
+//	{
+//		while (i <= size - piece->h)
+//		{
 			if (tab[i][j] == t && tab[i][j + 1] == t && tab[i][j + 2] == t && tab[i + 1][j + 2] == t)
 			{
 				tab[i][j] = p;
@@ -136,10 +135,10 @@ int		ft_p03(char **tab, int i, int j, t_piece *piece, int size)
 				tab[i + 1][j + 2] = p;
 				return (1);
 			}
-			i++;
-		}
-		j++;
-		i = 0;
-	}
+//			i++;
+//		}
+//		j++;
+//		i = 0;
+//	}
 	return (0);
 }
