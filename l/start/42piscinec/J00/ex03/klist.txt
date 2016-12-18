@@ -1,0 +1,6 @@
+Credentials cache: API:CA62C8C6-07AA-4C96-9F84-8E3F924DBE5F
+        Principal: vpluchar@42.FR
+
+  Issued                Expires               Principal
+Aug  1 20:21:25 2016  Aug  2 06:21:25 2016  krbtgt/42.FR@42.FR
+Aug  1 20:27:41 2016  Aug  2 06:21:25 2016  host/vgs-fn1.42.fr@42.FR
