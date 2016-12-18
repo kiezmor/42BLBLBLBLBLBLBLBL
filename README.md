@@ -2,11 +2,11 @@
 
 This repositorie contains all my 42 projects.
 * Start
-	* [Piscine C](/42piscinec)
-	* [Piscine Reloaded](/piscineR)
-	* [Libft](/libft)
-	* [Fillit *(WIP)*](/Fillit)
-	* [Get Next Line *(WIP)*](/GNL)
+	* [Piscine C](start/42piscinec)
+	* [Piscine Reloaded](start/piscineR)
+	* [Libft](start/libft)
+	* [Fillit *(WIP)*](start/Fillit)
+	* [Get Next Line *(WIP)*](start/GNL)
 		* *Project not started yet!*
 
 * Branch Unix
