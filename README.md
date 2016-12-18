@@ -1,7 +1,7 @@
 # [Vpluchar workspace](https://github.com/kiezmor/42BLBLBLBLBLBLBLBL)
 
 This repositorie contains all my 42 projects.
-* Start
+* [Start](start)
 	* [Piscine C](start/42piscinec)
 	* [Piscine Reloaded](start/piscineR)
 	* [Libft](start/libft)
@@ -9,11 +9,11 @@ This repositorie contains all my 42 projects.
 	* [Get Next Line *(WIP)*](start/GNL)
 		* *Project not started yet!*
 
-* Branch Unix
+* [Branch Unix](branch_unix)
 	* *Branch not started yet!*
 
-* Branch Algorithmic
+* [Branch Algorithmic](branch_algorithmic)
 	* *Branch not started yet!*
 
-* Branch Graphic
+* [Branch Graphic](branch_graphic)
 	* *Branch not started yet!*
