@@ -6,7 +6,7 @@
 #    By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/20 16:58:14 by vpluchar          #+#    #+#              #
-#    Updated: 2016/12/20 18:46:23 by vpluchar         ###   ########.fr        #
+#    Updated: 2016/12/20 18:48:42 by vpluchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,6 @@ CFLAGS=-Wall -Wextra -Werror
 LIBFTH= ./libft/includes get_next_line.h
 OBJ=$(FILES:.c=.o)
 LIBFT_DIR=./libft
-O_DIR=o/
 
 _RED=\x1b[31m
 _GREEN=\x1b[32m
@@ -44,5 +43,8 @@ cleanl:
 
 fcleanl:
 	@make fclean -C $(LIBFT_DIR)
+
+rel:
+	@make re -C $(LIBFT_DIR)
 
 re: fclean all
