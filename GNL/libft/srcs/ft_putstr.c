@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/09 01:46:28 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/12/20 16:57:40 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/11/25 03:41:39 by vpluchar          #+#    #+#             */
+/*   Updated: 2016/11/28 23:27:53 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int get_next_line(const int fd, char **line)
-{}
+void	ft_putstr(char const *s)
+{
+	ft_putstr_fd(s, 1);
+}

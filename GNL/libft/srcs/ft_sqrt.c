@@ -1,16 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/09 01:46:28 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/12/20 16:57:40 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/12/01 01:49:27 by vpluchar          #+#    #+#             */
+/*   Updated: 2016/12/01 01:52:16 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int get_next_line(const int fd, char **line)
-{}
+int		ft_sqrt(int nb)
+{
+	int i;
+
+	i = 0;
+	if (nb <= 0)
+		return (0);
+	while (i < nb && (i * i) != nb)
+		i++;
+	if ((i * i) == nb)
+		return (i);
+	return (0);
+}

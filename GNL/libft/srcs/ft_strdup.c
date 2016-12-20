@@ -1,16 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/09 01:46:28 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/12/20 16:57:40 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/11/09 16:32:35 by vpluchar          #+#    #+#             */
+/*   Updated: 2016/11/22 01:53:16 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int get_next_line(const int fd, char **line)
-{}
+char	*ft_strdup(const char *src)
+{
+	int		v;
+	char	*dest;
+
+	v = 0;
+	while (src[v] != '\0')
+		v++;
+	dest = (char*)malloc(sizeof(*src) * (v + 1));
+	if (!dest)
+		return (dest);
+	v = 0;
+	while (src[v] != '\0')
+	{
+		dest[v] = src[v];
+		v++;
+	}
+	dest[v] = '\0';
+	return (dest);
+}

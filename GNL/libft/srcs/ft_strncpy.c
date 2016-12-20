@@ -1,16 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/09 01:46:28 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/12/20 16:57:40 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/11/09 16:53:26 by vpluchar          #+#    #+#             */
+/*   Updated: 2016/11/22 01:53:34 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int get_next_line(const int fd, char **line)
-{}
+char	*ft_strncpy(char *dst, const char *src, size_t len)
+{
+	size_t	v;
+
+	v = 0;
+	while (v < len && src[v])
+	{
+		dst[v] = src[v];
+		v++;
+	}
+	while (v < len)
+	{
+		dst[v] = '\0';
+		v++;
+	}
+	return (dst);
+}

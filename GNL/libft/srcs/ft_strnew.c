@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/09 01:46:28 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/12/20 16:57:40 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/11/22 02:04:24 by vpluchar          #+#    #+#             */
+/*   Updated: 2016/11/28 05:29:51 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int get_next_line(const int fd, char **line)
-{}
+char	*ft_strnew(size_t size)
+{
+	return ((char *)ft_memalloc(size + 1));
+}

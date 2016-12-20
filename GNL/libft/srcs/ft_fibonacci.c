@@ -1,16 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/09 01:46:28 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/12/20 16:57:40 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/12/01 01:57:24 by vpluchar          #+#    #+#             */
+/*   Updated: 2016/12/01 01:58:00 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int get_next_line(const int fd, char **line)
-{}
+int		ft_fibonacci(int index)
+{
+	if (index < 0)
+		return (-1);
+	if (index == 0)
+		return (0);
+	else if (index == 1)
+		return (1);
+	else
+		return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
+}
