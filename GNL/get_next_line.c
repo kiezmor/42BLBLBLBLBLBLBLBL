@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/09 01:46:28 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/12/20 22:02:59 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/01/12 20:08:05 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,19 @@
 
 static int	process(const int fd, char *buff, char *s[fd])
 {
-	char	*tmp;
-	char	*p;
-	int		i;
+	char		*tmp;
+	char		*p;
+	int			i;
 
 	i = 0;
-	while (!(p = ft_strchr(s[fd], '\n')) && (i = read(fd, buff, BUFF_SIZE)) > 0)
+	p = ft_strchr(s[fd], '\n');
+	while (!(p) && (i = read(fd, buff, BUFF_SIZE)) > 0)
 	{
 		buff[i] = '\0';
 		tmp = s[fd];
 		s[fd] = ft_strjoin(tmp, buff);
 		ft_strdel(&tmp);
+		p = ft_strchr(s[fd], '\n');
 	}
 	if (i == -1)
 		return (-1);
@@ -33,7 +35,7 @@ static int	process(const int fd, char *buff, char *s[fd])
 	return (1);
 }
 
-int	get_next_line(const int fd, char **line)
+int			get_next_line(const int fd, char **line)
 {
 	static char	*s[256];
 	char		*tmp;

@@ -6,7 +6,7 @@
 #    By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/20 16:58:14 by vpluchar          #+#    #+#              #
-#    Updated: 2016/12/21 00:03:50 by vpluchar         ###   ########.fr        #
+#    Updated: 2017/01/13 21:55:51 by vpluchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ _RED=\x1b[31m
 _GREEN=\x1b[32m
 _NO_COLOR=\x1b[0m
 
-FILES=./libft/libft.a get_next_line.c
+FILES=./libft/libft.a get_next_line.c ttt/main.c
 
 $(NAME):
 	@make -C $(LIBFT_DIR)

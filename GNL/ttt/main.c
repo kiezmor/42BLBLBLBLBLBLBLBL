@@ -6,11 +6,11 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/20 16:58:14 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/12/20 21:58:10 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/01/12 20:00:47 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../get_next_line.h"
 
 int	main(int ac, char **av)
 {
