@@ -6,7 +6,7 @@
 /*   By: chle-van <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 03:59:16 by chle-van          #+#    #+#             */
-/*   Updated: 2016/12/19 03:46:55 by chle-van         ###   ########.fr       */
+/*   Updated: 2016/12/19 06:57:09 by chle-van         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
-# include "libft.h"
 # define BUFF_S 21
 
 typedef struct		s_piece
@@ -99,6 +98,17 @@ void				ft_displaytab(char **tab, int size);
 void				ft_listletter(t_piece *piece);
 void				ft_listdel(t_piece *list);
 void				ft_list_raz(t_piece *list);
+void				ft_putchar(const char c);
+void				ft_putnbr(int c);
 int					ft_res(t_piece *list, char **map, int size, t_map dcoord);
 int					ft_res2(t_piece *list, char **map, int size);
+size_t				ft_strlcpy(char *dst, const char *src, size_t size);
+char				*ft_strndup(const char *s, size_t n);
+void				ft_putstr_fd(const char *s, int fd);
+int					ft_countn(const char *s, char c);
+size_t				ft_strlen(const char *c);
+void				ft_putstr(const char *c);
+char				**ft_strsplit(const char *s, char c);
+void				*ft_memset(void *s, int c, size_t n);
+int					ft_sqrt(int c);
 #endif

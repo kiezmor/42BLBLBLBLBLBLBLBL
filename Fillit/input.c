@@ -6,7 +6,7 @@
 /*   By: chle-van <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 03:58:26 by chle-van          #+#    #+#             */
-/*   Updated: 2016/12/19 03:47:52 by chle-van         ###   ########.fr       */
+/*   Updated: 2016/12/19 06:21:19 by chle-van         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_tet	ft_readtet(int fd)
 
 	tetri.buff = malloc(sizeof(char *) * BUFF_S + 1);
 	tetri.size = read(fd, tetri.buff, BUFF_S);
-	tetri.buff[BUFF_S] = '\0';
+	tetri.buff[(int)tetri.size] = '\0';
 	return (tetri);
 }
 

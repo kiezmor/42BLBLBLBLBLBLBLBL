@@ -6,7 +6,7 @@
 /*   By: chle-van <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 07:58:11 by chle-van          #+#    #+#             */
-/*   Updated: 2016/12/18 02:07:26 by chle-van         ###   ########.fr       */
+/*   Updated: 2016/12/19 06:17:55 by chle-van         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,7 +145,7 @@ t_piece	*ft_d13(char **p, char c)
 			{
 				maillon = malloc(sizeof(t_piece));
 				maillon->type = 13;
-				maillon->l = 3;
+				maillon->l = 2;
 				maillon->h = 2;
 				return (maillon);
 			}

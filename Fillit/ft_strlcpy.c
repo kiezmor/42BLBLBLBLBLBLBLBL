@@ -6,11 +6,11 @@
 /*   By: chle-van <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 05:29:02 by chle-van          #+#    #+#             */
-/*   Updated: 2016/12/13 03:15:33 by chle-van         ###   ########.fr       */
+/*   Updated: 2016/12/19 06:48:35 by chle-van         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "fillit.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
