@@ -19,7 +19,7 @@
 # include <fcntl.h>
 # include <stdio.h>
 
-# include "libft.h"
+# include "../libft/includes/libft.h"
 
 # define BUFF_SIZE 42
 

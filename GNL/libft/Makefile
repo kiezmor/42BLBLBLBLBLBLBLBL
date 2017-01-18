@@ -41,13 +41,13 @@ $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 
 $(OBJ)%.o: $(SRC)
-	@echo "${_GREEN}Compilation!${_NO_COLOR}"
+	@echo "${_GREEN}Compilation de la lib!${_NO_COLOR}"
 	@$(CC) $(CFLAGS) -c $(SRC) $ -I $(INCLUDES)
 
 all: $(NAME)
 
 clean: 
-	@echo "${_RED}Supression des .o${_NO_COLOR}"
+	@echo "${_RED}Supression des .o lib${_NO_COLOR}"
 	@rm -f $(OBJ)
 
 fclean : clean
