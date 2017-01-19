@@ -6,17 +6,19 @@
 #    By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/20 16:58:14 by vpluchar          #+#    #+#              #
-#    Updated: 2017/01/13 21:55:51 by vpluchar         ###   ########.fr        #
+#    Updated: 2017/01/19 00:15:53 by vpluchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-CC=gcc
+
 FLAGS=-Wall -Wextra -Werror
 
 LIBFT_DIR=libft/
 
 INC=libft/includes/
 
-SRC=get_next_line.c main.c libft/libft.a
+LIB=libft/libft.a
+
+SRC=get_next_line.c main.c
 
 OBJ_NAME=$(SRC:.c=.o)
 
@@ -24,22 +26,22 @@ _RED=\x1b[31m
 _GREEN=\x1b[32m
 _NO_COLOR=\x1b[0m
 
-NAME=gnl
+NAME=GNL
 
 all:$(NAME)
 
 $(NAME):$(OBJ_NAME)
-	@make -C $(LIBFT_DIR)
 	@echo "${_GREEN}Creation du GNL!${_NO_COLOR}"
-	@$(CC) $(FLAGS) $^ -I $(INC) -o $@
+	@$(CC) $(FLAGS) $^ $(LIB) -I $(INC) -o $@
 
 $(OBJ_NAME):$(SRC)
 	@$(CC) $(FLAGS) -c $^
+	@make -C $(LIBFT_DIR)
 
 re:fclean all
 
 clean:
-	@echo "${_RED}Supression des .o${_NO_COLOR}"
+	@echo "${_RED}Supression des .o GNL${_NO_COLOR}"
 	@make clean -C $(LIBFT_DIR)
 	@rm -rf *.o
 
