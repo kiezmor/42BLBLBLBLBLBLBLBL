@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/20 16:58:14 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/01/19 06:00:09 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/01/19 11:14:34 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@ int	main(int ac, char **av)
 		fd = 0;
 	// printf("FD %d\n", fd);
 	while (get_next_line(fd, &line) > 0)
-		printf("%s\n", line);
+	{
+		printf("l |%s|\n", line);
+		// printf("%s\n", line);
+	}
 	return (0);
 }
