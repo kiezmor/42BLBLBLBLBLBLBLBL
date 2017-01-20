@@ -15,6 +15,7 @@
 int	main(int ac, char **av)
 {
 	int		fd;
+	int		i;
 	char	*line;
 
 	if (ac > 1)
@@ -22,10 +23,11 @@ int	main(int ac, char **av)
 	else
 		fd = 0;
 	// printf("FD %d\n", fd);
-	while (get_next_line(fd, &line) > 0)
+	while ((i = get_next_line(fd, &line)) > 0)
 	{
-		printf("l |%s|\n", line);
-		// printf("%s\n", line);
+		// printf("l |%s|\n", line);
+		printf("%d\n", i);
+		printf("%s\n", line);
 	}
 	return (0);
 }
