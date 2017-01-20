@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/09 01:46:28 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/01/19 11:22:03 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/01/19 11:47:45 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,22 +38,21 @@ static int	process(const int fd, char *buff, char *s[fd])
 	// 	buff[t - 1] = '\n';
 	// 	buff[t] = 'o';
 	// }
-	i = read(fd, buff, BUFF_SIZE);
-	while (i >=  && !p)
+	while (!p && (i = read(fd, buff, BUFF_SIZE)) > 0)
 	{
+		buff[i] = '\0';
 		// t = ft_strlen(buff);
 		// printf("bia|%c|\n", buff[i]);
 		// printf("iwh |%d|\n", i);
-		buff[i] = '\0';
-		// if (i < BUFF_SIZE && i > 0)
-		// {
-		// 	buff[i] = '\n';
-		// 	// buff[i + 1] = '\0';
-		// 	// return (1);
-		// 	// tmp = s[fd];
-		// 	// s[fd] = ft_strjoin(tmp, buff);
-		// 	// ft_strdel(&tmp);
-		// }
+		if (i < BUFF_SIZE && i > 0)
+		{
+			buff[i] = '\n';
+			// buff[i + 1] = '\0';
+			// return (1);
+			// tmp = s[fd];
+			// s[fd] = ft_strjoin(tmp, buff);
+			// ft_strdel(&tmp);
+		}
 		// printf("bi|%c|\n", buff[i]);
 		// printf("buff|%s|\n", buff);
 		tmp = s[fd];
@@ -74,7 +73,6 @@ static int	process(const int fd, char *buff, char *s[fd])
 		//	printf("kek %d\n", t);
 		// printf("k%ct\n", buff[i]);
 		// }
-		i = read(fd, buff, BUFF_SIZE);
 		p = ft_strchr(s[fd], '\n');
 	}
 	// p = ft_strchr(s[fd], '\n');
