@@ -5,133 +5,94 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/09 01:46:28 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/01/19 11:47:45 by vpluchar         ###   ########.fr       */
+/*   Created: 2017/01/21 03:59:56 by vpluchar          #+#    #+#             */
+/*   Updated: 2017/01/21 07:49:39 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static int	process(const int fd, char *buff, char *s[fd])
+static int	gnl_get_line(char **content, char **line, int res)
 {
-	char		*tmp;
-	char		*p;
-	int			i;
-	// char		*t;
-	// int			t;
-	// int			v;
+	char	*tmp;
+	char	*off;
 
-	// t = 0;
-	p = ft_strchr(s[fd], '\n');
-	// t = p;
-	// if (ft_strlen(s[fd]) != i && !t)
-	// {
-	// 	t++;
-
-	// }
-	// v = ft_strlen(*s);
-	// printf("buff %d\n", *buff);
-	// t = ft_strchr(s[fd], '\0');
-	// if (buff)
-	// {
-	// 	printf("kek %d\n", t);
-	// 	buff[t - 1] = '\n';
-	// 	buff[t] = 'o';
-	// }
-	while (!p && (i = read(fd, buff, BUFF_SIZE)) > 0)
+	tmp = *content;
+	off = ft_strchr(tmp, '\n');
+	if (off)
 	{
-		buff[i] = '\0';
-		// t = ft_strlen(buff);
-		// printf("bia|%c|\n", buff[i]);
-		// printf("iwh |%d|\n", i);
-		if (i < BUFF_SIZE && i > 0)
-		{
-			buff[i] = '\n';
-			// buff[i + 1] = '\0';
-			// return (1);
-			// tmp = s[fd];
-			// s[fd] = ft_strjoin(tmp, buff);
-			// ft_strdel(&tmp);
-		}
-		// printf("bi|%c|\n", buff[i]);
-		// printf("buff|%s|\n", buff);
-		tmp = s[fd];
-		s[fd] = ft_strjoin(tmp, buff);
-		ft_strdel(&tmp);
-		// if (buff[i] && buff[i + 1] == '\0')// 	buff[i] = '\n';
-		// t = ft_strlen(buff);
-		
-		// else
-		// {
-		// buff[i] = '\0';
-		// }
-		
-		// printf("buf %s\n", buff);
-		// if (buff[i] == '\0' && buff[i] != '\n')
-		// {
-		// 	buff[i] = '\n';
-		//	printf("kek %d\n", t);
-		// printf("k%ct\n", buff[i]);
-		// }
-		p = ft_strchr(s[fd], '\n');
+		*line = ft_strsub(tmp, 0, off - tmp);
+		*content = ft_strdup(off + 1);
+		free(tmp);
 	}
-	// p = ft_strchr(s[fd], '\n');
-	// if (buff[i] != '\0' && buff[i] == '\n' && i > 1)
-	// 	buff[i] = '\0';
-	// else
-	// 	buff[i] = '\n';
-	// if (i > 1 && buff[i] != '\n')
-	// {
-	// 	buff[i] = '\n';
-	// 	p = ft_strchr(s[fd], '\n');
-	// 	i = read(fd, buff, BUFF_SIZE);
-	// }
-	// printf("i %d\n", i);
-	// printf("p %s\n", p);
-	// printf("t %s\n", t);
-	// if (t != 0)
-	// 	return (1);
-	if (i == -1)
+	else
+	{
+		*line = ft_strdup(tmp);
+		free(*content);
+		*content = NULL;
+	}
+	if ((!*line) || (off && !*content))
 		return (-1);
-	if (i == 0 && !p)
-		return (0);
-	return (1);
+	if ((!res && *content) || (*line))
+		return (1);
+	return (res);
 }
 
-// int			check(const int fd, char *buff, char *s[fd])
-// {
-// 	int		i;
-// 	while ((i = read(fd, buff, BUFF_SIZE)) > 1)
-// 	{
-// 		if (i > 1 && buff[i] != '\n')
-// 			buff[i] == '\n';
-// 	}
-// }
-
-int			get_next_line(const int fd, char **line)
+static int	gnl_get_content(int fd, char **content)
 {
-	static char	*s[256];
-	char		*tmp;
-	int			i;
-	char		buff[BUFF_SIZE + 1];
+	char	*buf;
+	char	*tmp;
+	int		res;
+	// int		i;
 
-	if (fd < 0 || !line)
+	// i = 0;
+	if (!(buf = ft_strnew(BUFF_SIZE)))
 		return (-1);
-	if (!s[fd])
-		s[fd] = ft_strnew(1);
-	if ((i = process(fd, buff, &*s)) == -1)
-		return (-1);
-	if (i == 0)
+	res = 1;
+	while ((ft_strchr(*content, '\n') == NULL) && res > 0)
 	{
-		*line = s[fd];
-		s[fd] = NULL;
-		return (0);
+		// i++;
+		// printf("|%d|\n", i);
+		tmp = *content;
+		res = read(fd, buf, BUFF_SIZE);
+		if (res > 0)
+		{
+			buf[res] = '\0';
+			if (!(*content = ft_strjoin(tmp, buf)))
+			{
+				*content = ft_strcat(tmp, buf);
+				free(buf);
+				return (-1);
+			}
+			free(tmp);
+		}
 	}
-	// printf("ignl|%d|\n", i);
-	// printf("sfd|%s|\n", ft_strchr(s[fd], '\n'));
-	*line = ft_strsub(s[fd], 0, ft_strchr(s[fd], '\n') - s[fd]);
-	tmp = s[fd];
-	s[fd] = ft_strdup(ft_strchr(s[fd], '\n') + 1);
-	ft_strdel(&tmp);
-	return (1);
+	free(buf);
+	return (res);
+}
+
+int			get_next_line(int const fd, char **line)
+{
+	static char	*content[1024];
+	int			res;
+
+	if (!line || (read(fd, NULL, 0) == -1) || fd > 1023 || fd < 0)
+		return (-1);
+	if (content[fd] == NULL)
+		if ((content[fd] = ft_strnew(BUFF_SIZE * 2)) == NULL)
+			return (-1);
+	res = 0;
+	if (ft_strchr(content[fd], '\n') == NULL)
+		res = gnl_get_content(fd, &content[fd]);
+	if (res > 1)
+		res = 1;
+	if (res == 0 && *content[fd] == '\0')
+	{
+		*line = NULL;
+		free(content[fd]);
+		content[fd] = NULL;
+	}
+	else if (res > 0 || *content[fd] != '\0')
+		res = gnl_get_line(&content[fd], line, res);
+	return (res);
 }
