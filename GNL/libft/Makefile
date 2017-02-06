@@ -6,7 +6,7 @@
 #    By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/16 05:28:33 by vpluchar          #+#    #+#              #
-#    Updated: 2016/12/20 18:48:39 by vpluchar         ###   ########.fr        #
+#    Updated: 2017/02/06 22:23:36 by vpluchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,7 @@ clean:
 	@echo "${_RED}Supression des .o lib${_NO_COLOR}"
 	@rm -f $(OBJ)
 
-fclean : clean
+fclean:clean
 	@echo "${_RED}Supression de Libft.a${_NO_COLOR}"
 	@rm -f $(NAME)
 

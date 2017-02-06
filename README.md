@@ -7,4 +7,4 @@
 	* *Project make with chle-van*
 * [Get Next Line *(WIP)*](GNL)
 	* *Project started!*
-	* *Need patch no '\n' and multi fd!*
+	* *Need patch some hard test!*
