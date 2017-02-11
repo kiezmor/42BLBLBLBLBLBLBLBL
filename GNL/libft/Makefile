@@ -6,21 +6,37 @@
 #    By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/16 05:28:33 by vpluchar          #+#    #+#              #
-#    Updated: 2017/02/06 22:23:36 by vpluchar         ###   ########.fr        #
+#    Updated: 2017/02/11 07:41:28 by vpluchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+## Name
+
 NAME=libft.a
+
+## Compilation
+
 CC=gcc
 CFLAGS=-Wall -Wextra -Werror
-INCLUDES= ./includes/
-OBJ=$(FILES:.c=.o)
+
+## Directories
+
+INC_DIR= ./includes/
+OBJ_DIR= ./obj/
 SRC_DIR=srcs/
+
+OBJ=$(FILES:.c=.o)
+
 SRC=$(addprefix $(SRC_DIR), $(FILES))
+
+## Colors
 
 _RED=\x1b[31m
 _GREEN=\x1b[32m
+_YELLOW=\x1b[33m
 _NO_COLOR=\x1b[0m
+
+## Functions
 
 FILES=ft_atoi.c ft_isdigit.c ft_memalloc.c ft_memdel.c ft_putendl.c\
 	ft_putstr_fd.c  ft_strcpy.c ft_striteri.c ft_strmapi.c ft_strnew.c\
@@ -36,22 +52,24 @@ FILES=ft_atoi.c ft_isdigit.c ft_memalloc.c ft_memdel.c ft_putendl.c\
 	ft_lstiter.c ft_lstmap.c ft_strndup.c ft_countwords.c ft_strlcpy.c\
 	ft_strrev.c ft_sqrt.c ft_range.c ft_fibonacci.c
 
+## Rules
+
 $(NAME): $(OBJ)
-	@echo "${_GREEN}Creation de la lib!${_NO_COLOR}"
+	@echo "${_GREEN}Compilation de ${_YELLOW}Libft${_NO_COLOR}"
 	@ar rc $(NAME) $(OBJ)
 
 $(OBJ)%.o: $(SRC)
-	@echo "${_GREEN}Compilation de la lib!${_NO_COLOR}"
-	@$(CC) $(CFLAGS) -c $(SRC) $ -I $(INCLUDES)
+	@echo "${_GREEN}Compilation des .o de ${_YELLOW}Libft${_NO_COLOR}"
+	@$(CC) $(CFLAGS) -c $(SRC) $ -I $(INC_DIR)
 
 all: $(NAME)
 
 clean: 
-	@echo "${_RED}Supression des .o lib${_NO_COLOR}"
+	@echo "${_RED}Suppression des .o de ${_YELLOW}Libft${_NO_COLOR}"
 	@rm -f $(OBJ)
 
-fclean:clean
-	@echo "${_RED}Supression de Libft.a${_NO_COLOR}"
+fclean : clean
+	@echo "${_RED}Suppression de ${_YELLOW}Libft${_NO_COLOR}"
 	@rm -f $(NAME)
 
 re: fclean all
