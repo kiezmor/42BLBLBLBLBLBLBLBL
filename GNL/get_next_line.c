@@ -6,11 +6,13 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 06:30:08 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/02/11 06:30:49 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/02/11 07:47:06 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int			get_next_line(int const fd, char **line)
-{}
+int		get_next_line(int const fd, char **line)
+{
+	return (WIP);
+}
