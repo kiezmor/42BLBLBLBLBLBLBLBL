@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/09 01:46:52 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/02/09 22:27:15 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/11/30 23:25:18 by vpluchar          #+#    #+#             */
+/*   Updated: 2016/12/01 02:12:33 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <string.h>
-# include <fcntl.h>
-# include <stdio.h>
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+{
+	size_t	i;
 
-# include "../libft/includes/libft.h"
-
-# define BUFF_SIZE 1000
-
-int	get_next_line(const int fd, char **line);
-
-#endif
+	i = -1;
+	while (src[++i] && i < size - 1)
+		dst[i] = src[i];
+	dst[i] = '\0';
+	return (ft_strlen(src));
+}

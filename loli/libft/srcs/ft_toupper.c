@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/09 01:46:52 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/02/09 22:27:15 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/11/16 05:21:07 by vpluchar          #+#    #+#             */
+/*   Updated: 2016/11/22 01:53:53 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <string.h>
-# include <fcntl.h>
-# include <stdio.h>
-
-# include "../libft/includes/libft.h"
-
-# define BUFF_SIZE 1000
-
-int	get_next_line(const int fd, char **line);
-
-#endif
+int		ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		return (c - 'a' + 'A');
+	return (c);
+}

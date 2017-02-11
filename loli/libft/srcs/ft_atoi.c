@@ -1,28 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/09 01:46:52 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/02/09 22:27:15 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/11/10 16:40:57 by vpluchar          #+#    #+#             */
+/*   Updated: 2016/12/03 04:37:03 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <string.h>
-# include <fcntl.h>
-# include <stdio.h>
+int		ft_atoi(const char *str)
+{
+	int		v;
+	int		nbs;
+	int		neg;
 
-# include "../libft/includes/libft.h"
-
-# define BUFF_SIZE 1000
-
-int	get_next_line(const int fd, char **line);
-
-#endif
+	v = 0;
+	nbs = 0;
+	neg = 0;
+	while ((str[v] == ' ') || (str[v] >= 9 && str[v] <= 13))
+		v++;
+	if (str[v] == 45)
+		neg = 1;
+	if (str[v] == 45 || str[v] == 43)
+		v++;
+	while (str[v] >= 48 && str[v] <= 57)
+	{
+		nbs *= 10;
+		nbs += (str[v] - 48);
+		v++;
+	}
+	if (neg == 1)
+		return (-nbs);
+	else
+		return (nbs);
+}
