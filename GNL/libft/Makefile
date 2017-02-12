@@ -6,7 +6,7 @@
 #    By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/16 05:28:33 by vpluchar          #+#    #+#              #
-#    Updated: 2017/02/11 07:41:28 by vpluchar         ###   ########.fr        #
+#    Updated: 2017/02/11 12:24:37 by vpluchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,9 +21,10 @@ CFLAGS=-Wall -Wextra -Werror
 
 ## Directories
 
-INC_DIR= ./includes/
-OBJ_DIR= ./obj/
-SRC_DIR=srcs/
+INC_DIR= ./includes
+
+# OBJ_DIR= ./obj/
+SRC_DIR=./srcs/
 
 OBJ=$(FILES:.c=.o)
 
@@ -58,7 +59,7 @@ $(NAME): $(OBJ)
 	@echo "${_GREEN}Compilation de ${_YELLOW}Libft${_NO_COLOR}"
 	@ar rc $(NAME) $(OBJ)
 
-$(OBJ)%.o: $(SRC)
+$(OBJ): $(SRC)
 	@echo "${_GREEN}Compilation des .o de ${_YELLOW}Libft${_NO_COLOR}"
 	@$(CC) $(CFLAGS) -c $(SRC) $ -I $(INC_DIR)
 

@@ -6,7 +6,7 @@
 #    By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/20 16:58:14 by vpluchar          #+#    #+#              #
-#    Updated: 2017/02/11 07:44:41 by vpluchar         ###   ########.fr        #
+#    Updated: 2017/02/11 12:40:21 by vpluchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,12 +22,12 @@ FLAGS=-Wall -Wextra -Werror
 ## Directories
 
 LIBFT_DIR=libft/
-INC=libft/includes/
+INC=./libft/includes
 LIB=libft/libft.a
 
 OBJ_NAME=$(SRC:.c=.o)
 
-SRC=get_next_line1.c main.c
+SRC=get_next_line.c main.c
 
 ## Colors
 
