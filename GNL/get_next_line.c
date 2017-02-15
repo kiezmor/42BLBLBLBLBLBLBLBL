@@ -27,7 +27,7 @@ static char		**ft_list(int fd, t_list **list)
 	return ((char **)(&(tmp->content)));
 }
 
-static void		ft_line(char *buf, char **line, int r)
+static void		ft_line(char *buf, char **line, int i)
 {
 	char *tmp;
 
