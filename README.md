@@ -6,5 +6,4 @@
 * [Fillit](Fillit)
 	* *Project make with chle-van*
 * [Get Next Line *(WIP)*](GNL)
-	* *Project started!*
-	* *Need patch some hard test!*
+	* *Project finish : Multi fd work!*
