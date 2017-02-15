@@ -12,7 +12,7 @@
 
 #include "get_next_line.h"
 
-static char		**ft_init_list(int fd, t_list **list)
+static char		**ft_list(int fd, t_list **list)
 {
 	t_list *tmp;
 
@@ -27,7 +27,7 @@ static char		**ft_init_list(int fd, t_list **list)
 	return ((char **)(&(tmp->content)));
 }
 
-static void		ft_update_line(char *buf, char **line, int r)
+static void		ft_line(char *buf, char **line, int i)
 {
 	char *tmp;
 
@@ -52,14 +52,14 @@ static void		ft_update_line(char *buf, char **line, int r)
 	}
 }
 
-static int		ft_check_and_stock(char *buf, char **stock, char **line, int i)
+static int		ft_check_stock(char *buf, char **stock, char **line, int i)
 {
 	char	*tmp;
 
 	if (!(ft_strchr(buf, CHAR)))
 	{
 		if (buf)
-			ft_update_line(buf, line, 0);
+			ft_line(buf, line, 0);
 		return (0);
 	}
 	while (buf[i] != CHAR && buf[i] != '\0')
@@ -67,7 +67,7 @@ static int		ft_check_and_stock(char *buf, char **stock, char **line, int i)
 	if (*line)
 	{
 		tmp = ft_strsub(buf, 0, i);
-		ft_update_line(tmp, line, 1);
+		ft_line(tmp, line, 1);
 	}
 	else
 		*line = ft_strsub(buf, 0, i);
@@ -76,7 +76,7 @@ static int		ft_check_and_stock(char *buf, char **stock, char **line, int i)
 	return (1);
 }
 
-static int		ft_update_stock(char **stock, char **line)
+static int		ft_stock(char **stock, char **line)
 {
 	char	*tmp;
 	int		i;
@@ -110,13 +110,13 @@ int				get_next_line(const int fd, char **line)
 	if (!line || fd < 0 || BUFF_SIZE <= 0)
 		return (-1);
 	*line = NULL;
-	stock = ft_init_list(fd, &list);
-	if (*stock && ft_update_stock(stock, line) == 1)
+	stock = ft_list(fd, &list);
+	if (*stock && ft_stock(stock, line) == 1)
 		return (1);
 	while ((ret = read(fd, tmp, BUFF_SIZE)) > 0)
 	{
 		tmp[ret] = '\0';
-		if (ft_check_and_stock(tmp, stock, line, 0) == 1)
+		if (ft_check_stock(tmp, stock, line, 0) == 1)
 			return (1);
 	}
 	if (ret < 0)
