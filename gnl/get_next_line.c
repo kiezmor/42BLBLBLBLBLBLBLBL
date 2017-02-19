@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 14:50:55 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/02/11 15:25:21 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/02/19 10:56:58 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static char		**ft_list(int fd, t_list **list)
 {
-	t_list *tmp;
+	t_list	*tmp;
 
 	tmp = *list;
 	while (tmp && tmp->content_size != (size_t)fd)
@@ -32,9 +32,7 @@ static void		ft_line(char *buf, char **line, int i)
 	char *tmp;
 
 	if (!*line)
-	{
 		*line = ft_strdup(buf);
-	}
 	else
 	{
 		tmp = *line;
@@ -47,7 +45,7 @@ static void		ft_line(char *buf, char **line, int i)
 			*line = ft_strnew(0 + ft_strlen(buf));
 		*line = ft_strcat(*line, buf);
 		ft_strdel(&tmp);
-		if (buf && r == 1)
+		if (buf && i == 1)
 			ft_strdel(&buf);
 	}
 }
