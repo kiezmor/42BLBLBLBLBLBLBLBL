@@ -5,5 +5,5 @@
 * [Libft](libft)
 * [Fillit](fillit)
 	* *Project make with chle-van*
-* [Get Next Line *(WIP)*](gnl)
+* [Get Next Line](gnl)
 	* *Project finish : Multi fd work!*
