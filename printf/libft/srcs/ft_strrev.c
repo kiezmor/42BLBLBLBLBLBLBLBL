@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/16 05:21:07 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/03/08 01:48:11 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/11/30 23:28:43 by vpluchar          #+#    #+#             */
+/*   Updated: 2016/11/30 23:37:22 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/includes/libft.h"
+#include "libft.h"
 
-int		ft_printf(const char *format, ...)
+char	*ft_strrev(char *str)
 {
-	
+	int i;
+	int j;
+	int tmp;
+
+	i = 0;
+	j = ft_strlen(str) - 1;
+	while (i < j)
+	{
+		tmp = str[i];
+		str[i] = str[j];
+		str[j] = tmp;
+		i++;
+		j--;
+	}
+	return (str);
 }

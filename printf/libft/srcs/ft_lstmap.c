@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/16 05:21:07 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/03/08 01:48:11 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/11/28 04:18:48 by vpluchar          #+#    #+#             */
+/*   Updated: 2016/11/28 05:02:10 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/includes/libft.h"
+#include "libft.h"
 
-int		ft_printf(const char *format, ...)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	
+	t_list	*new;
+
+	if ((new = (t_list*)malloc(sizeof(*new))) && f && lst)
+	{
+		new = f(lst);
+		if (lst->next)
+			new->next = ft_lstmap(lst->next, f);
+		return (new);
+	}
+	return (NULL);
 }

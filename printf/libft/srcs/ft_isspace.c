@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/16 05:21:07 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/03/08 01:48:11 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/11/23 06:06:35 by vpluchar          #+#    #+#             */
+/*   Updated: 2016/11/28 07:26:47 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/includes/libft.h"
+#include "libft.h"
 
-int		ft_printf(const char *format, ...)
+int	ft_isspace(int c)
 {
-	
+	if (c == '\t' || c == '\n' || c == '\v' || c == '\f'
+			|| c == '\r' || c == ' ')
+		return (1);
+	return (0);
 }

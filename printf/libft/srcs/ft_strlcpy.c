@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/16 05:21:07 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/03/08 01:48:11 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/11/30 23:25:18 by vpluchar          #+#    #+#             */
+/*   Updated: 2016/12/01 02:12:33 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/includes/libft.h"
+#include "libft.h"
 
-int		ft_printf(const char *format, ...)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	
+	size_t	i;
+
+	i = -1;
+	while (src[++i] && i < size - 1)
+		dst[i] = src[i];
+	dst[i] = '\0';
+	return (ft_strlen(src));
 }

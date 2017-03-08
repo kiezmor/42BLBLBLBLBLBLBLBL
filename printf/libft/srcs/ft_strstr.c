@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/16 05:21:07 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/03/08 01:48:11 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/11/16 02:04:33 by vpluchar          #+#    #+#             */
+/*   Updated: 2016/11/27 21:53:26 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/includes/libft.h"
+#include "libft.h"
 
-int		ft_printf(const char *format, ...)
+char	*ft_strstr(const char *b, const char *s)
 {
-	
+	int j;
+
+	j = 0;
+	if (!(*s))
+		return ((char *)b);
+	while (*b)
+	{
+		while (b[j] == s[j] && s[j] && b[j])
+			j++;
+		if (!s[j])
+			return ((char *)b);
+		j = 0;
+		b++;
+	}
+	return (NULL);
 }
