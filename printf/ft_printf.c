@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 05:21:07 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/03/08 08:32:04 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/03/08 08:53:08 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void		ft_printf(const char * restrict fmt, ...)
 {
 	va_list ap, ap2;
 	int		i;
+	char	*tmp;
 
 	i = 0;
 	va_start(ap, fmt);
@@ -43,17 +44,24 @@ void		ft_printf(const char * restrict fmt, ...)
 				++i;
 			}
 			printf("i |%d|\n", i);
+			printf("fmt 3.5|%s|\n", fmt);
 			if (i == 2)
 			{
-				printf("fmt 4|%s|\n", fmt);
 				printf("|%s|\n", "stock2char()");
+				i = 0;
+				tmp = (char *)fmt;
+				printf("tmp|%s|\n", tmp);
 				++fmt;
+				printf("fmt 4|%s|\n", fmt);
 			}
 			else
 			{
-				printf("fmt 5|%s|\n", fmt);
 				printf("|%s|\n", "stock1char()");
+				i = 0;
+				tmp = (char *)fmt;
+				printf("tmp|%s|\n", tmp);
 				++fmt;
+				printf("fmt 5|%s|\n", fmt);
 			}
 		}
 	}
