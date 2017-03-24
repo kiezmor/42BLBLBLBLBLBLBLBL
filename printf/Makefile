@@ -6,30 +6,56 @@
 #    By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/03/19 05:06:16 by vpluchar          #+#    #+#              #
-#    Updated: 2017/03/19 05:06:18 by vpluchar         ###   ########.fr        #
+#    Updated: 2017/03/25 00:43:56 by vpluchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= ft_printf
-cc	= gcc
+NAME	= libftprintf.a
+
+CC	= gcc
 FLAGS	= -Wall -Werror -Wextra
-SRC	= main.c ft_printf.c ft_flag.c
+
+##REMOVE KEBAB >>
+
+LIB = ./libft/libft.a
+LIB_DIR = ./libft/
+LIB_INC = ./libft/includes/
+
+## << REMOVE KEBAB
+
+SRC	= ft_printf.c ft_flag.c
 OBJ	= $(SRC:.c=.o)
-HEADER	= /libft/includes/
+
 
 all: $(NAME)
 
-$(NAME):
-	@$(CC) $(FLAGS) -I$(HEADER) -c $(SRC)
-	@$(CC) -o $(NAME) $(OBJ) -L libft/ -lft
-	@echo "$(NAME) files created"
+$(NAME): $(OBJ)
+	@ar rc $(NAME) $(OBJ)
+	@echo "lib created"
+
+$(OBJ):
+	@$(CC) $(FLAGS) -c $(SRC) -I $(LIB_INC)
+	@echo "obj created"
+
+##REMOVE KEBAB >>
+
+test:$(NAME)
+	@$(CC) $(FLAGS) main.c libftprintf.a $(LIB)
+	@./a.out
+	@rm ./a.out
+
+lib:
+	@make -C $(LIB_DIR)
+	@make clean -C $(LIB_DIR)
+
+## << REMOVE KEBAB
 
 clean:
 	@rm -f $(OBJ)
-	@echo "object files deleted"
+	@echo "obj deleted"
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "binary files deleted"
+	@echo "lib deleted"
 
 re: fclean all
