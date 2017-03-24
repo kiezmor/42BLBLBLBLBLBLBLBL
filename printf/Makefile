@@ -5,64 +5,31 @@
 #                                                     +:+ +:+         +:+      #
 #    By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2017/03/08 01:40:21 by vpluchar          #+#    #+#              #
-#    Updated: 2017/03/08 01:46:14 by vpluchar         ###   ########.fr        #
+#    Created: 2017/03/19 05:06:16 by vpluchar          #+#    #+#              #
+#    Updated: 2017/03/19 05:06:18 by vpluchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-## Name
-
-NAME=libftprintf.a
-
-## Compilation
-
-CC=gcc
-CFLAGS=-Wall -Wextra -Werror
-
-## Directories
-
-LIBFT_DIR=./libft/
-INC_DIR= ./includes/
-SRC_DIR=srcs/
-
-LIB_INC=./libft/includes
-LIBFT=./libft/libft.a
-
-OBJ=$(FILES:.c=.o)
-
-SRC=$(addprefix $(SRC_DIR), $(FILES))
-
-## Colors
-
-_RED=\x1b[31m
-_GREEN=\x1b[32m
-_YELLOW=\x1b[33m
-_NO_COLOR=\x1b[0m
-
-## Functions
-
-FILES= ft_printf.c
-
-## Rules
-
-$(NAME): $(OBJ)
-	@echo "${_GREEN}Compilation de ${_YELLOW}Printf${_NO_COLOR}"
-	@ar rc $(NAME) $(OBJ) $(LIBFT) -I $(LIB_INC)
-
-$(OBJ)%.o: $(SRC)
-	@echo "${_GREEN}Compilation des .o de ${_YELLOW}Printf${_NO_COLOR}"
-	@$(CC) $(CFLAGS) -c $(SRC) $ -I $(INC_DIR)
+NAME	= ft_printf
+cc	= gcc
+FLAGS	= -Wall -Werror -Wextra
+SRC	= main.c ft_printf.c ft_flag.c
+OBJ	= $(SRC:.c=.o)
+HEADER	= /libft/includes/
 
 all: $(NAME)
 
-clean: 
-	@echo "${_RED}Suppression des .o de ${_YELLOW}Printf${_NO_COLOR}"
-	@rm -f $(OBJ)
-	@make clean -C $(LIBFT_DIR)
+$(NAME):
+	@$(CC) $(FLAGS) -I$(HEADER) -c $(SRC)
+	@$(CC) -o $(NAME) $(OBJ) -L libft/ -lft
+	@echo "$(NAME) files created"
 
-fclean : clean
-	@echo "${_RED}Suppression de ${_YELLOW}Printf${_NO_COLOR}"
+clean:
+	@rm -f $(OBJ)
+	@echo "object files deleted"
+
+fclean: clean
 	@rm -f $(NAME)
-	@make fclean -C $(LIBFT_DIR)
+	@echo "binary files deleted"
 
 re: fclean all
