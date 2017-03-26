@@ -6,7 +6,7 @@
 #    By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/03/19 05:06:16 by vpluchar          #+#    #+#              #
-#    Updated: 2017/03/25 00:43:56 by vpluchar         ###   ########.fr        #
+#    Updated: 2017/03/26 01:55:48 by vpluchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,15 +31,16 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
-	@echo "lib created"
+##	@echo "lib created"
 
 $(OBJ):
 	@$(CC) $(FLAGS) -c $(SRC) -I $(LIB_INC)
-	@echo "obj created"
+##	@echo "obj created"
 
 ##REMOVE KEBAB >>
 
-test:$(NAME)
+test:
+	@make re
 	@$(CC) $(FLAGS) main.c libftprintf.a $(LIB)
 	@./a.out
 	@rm ./a.out
@@ -52,10 +53,10 @@ lib:
 
 clean:
 	@rm -f $(OBJ)
-	@echo "obj deleted"
+##	@echo "obj deleted"
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "lib deleted"
+##	@echo "lib deleted"
 
 re: fclean all

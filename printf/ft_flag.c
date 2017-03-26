@@ -6,12 +6,21 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/19 05:05:34 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/03/19 05:05:36 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/03/26 00:43:58 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "./libft/includes/libft.h"
+
+int			flag_lc(va_list ap)
+{
+	char	c;
+	
+	c = ((signed char)va_arg(ap, int));
+	ft_putchar(c);
+	return (1);
+}
 
 int			flag_s(va_list ap)
 {
