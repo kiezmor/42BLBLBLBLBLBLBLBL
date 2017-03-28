@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/19 05:05:24 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/03/26 06:54:17 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/03/28 05:32:25 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,11 @@ int			ft_printf(const char *format, ...)
 	va_end(args);
 	return (res);
 }
+
+// int			ft_checkmod()
+// {
+	
+// }
 
 int			ft_checkflag(char *flag, va_list args)
 {

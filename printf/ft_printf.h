@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/19 05:05:53 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/03/26 06:54:13 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/03/28 04:18:42 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdarg.h>
 
 # define FLAGS 5
-# define MOD "0hlhhllqjzt.#-+ "
+# define MOD "0hlqjzt.#-+ "
 
 typedef struct	s_flag
 {
