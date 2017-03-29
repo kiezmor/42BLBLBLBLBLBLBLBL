@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/19 05:05:34 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/03/28 08:14:30 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/03/29 05:18:16 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,13 @@ int			flag_c(va_list ap)
 int			flag_d(va_list ap)
 {
 	char	*d;
+	int		i;
 
 	d = ft_itoa(va_arg(ap, int));
 	ft_putstr(d);
-	return (ft_strlen(d));
+	i = ft_strlen(d);
+	free(d);
+	return (i);
 }
 
 int			flag_p(va_list ap)

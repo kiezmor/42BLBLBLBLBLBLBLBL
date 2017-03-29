@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/19 05:05:24 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/03/28 05:32:25 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/03/29 05:18:35 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,11 @@ int			ft_printf(const char *format, ...)
 	{
 		if (format[0] == '%' && format)
 		{
-			res += ft_checkflag((char *)++format, args);
+			res += ft_checkflag((char *)format, args);
+			// ft_putstr("BITE\n");
 			// ft_putnbr(++res);
 			format++;
-			ft_putchar(format[0]);
+			// ft_putchar(format[0]);
 		}
 		else if (*format)
 			ft_putchar(format[0]);
@@ -76,29 +77,52 @@ int			ft_printf(const char *format, ...)
 	return (res);
 }
 
-// int			ft_checkmod()
-// {
-	
-// }
+int			ft_checkmod(char *flag, va_list args)
+{
+	int		i;
+	int		j = 0;
+
+	i = 0;
+	while (i <= 12)
+	{
+		printf("%s|||\n", ft_strsub(flag, i, 1));
+		// printf("|||%d|\n", ft_strcmp(ft_strsub(flag, i, 1), &MOD[j]));
+		while (ft_strcmp(ft_strsub(flag, i, 1), &MOD[j]) == 0)
+		{
+			// printf("|||%d|\n", ft_strcmp(ft_strsub(flag, i, 1), &MOD[j]));
+			ft_putchar(MOD[j]);
+			ft_putchar('\n');
+			j++;
+		}
+		i++;
+	}
+	if (i == 16)
+		return (g_flag_tab[i].ptrfunc(args));
+	return (0);
+}
 
 int			ft_checkflag(char *flag, va_list args)
 {
-	char	*pf_flag;
 	int		i;
+	// int		j;
 
 	i = 0;
-	pf_flag = ft_strnew(ft_strlen(flag));
-	ft_strcpy(pf_flag, flag);
-
-	if (pf_flag[0] == '%')
+	++flag;
+	if (flag[0] == '%')
 	{
 		ft_putchar('%');
 		return (1);
 	}
 	while (i < FLAGS)
 	{
-		if (ft_strcmp(ft_strsub(pf_flag, 0, 1), g_flag_tab[i].key) == 0)
+		if (ft_strcmp(ft_strsub(flag, 0, 1), g_flag_tab[i].key) == 0)
 			return (g_flag_tab[i].ptrfunc(args));
+		// j = ft_strcmp(ft_strsub(pf_flag, 1, 1), g_flag_tab[i].key);
+		// if (pf_flag[0] == ' ' && j == 0)
+		// {
+		// 	ft_putchar(' ');
+		// 	return (g_flag_tab[i].ptrfunc(args));
+		// }
 		i++;
 	}
 
@@ -120,8 +144,8 @@ int			ft_checkflag(char *flag, va_list args)
 // 			return (g_flag_tab[i].ptrfunc(args));
 // 		i++;
 // 	}
-
 	ft_putstr("[Unknown command: %]");
-	ft_putendl(pf_flag);
+	ft_putendl(flag);
+	free(&flag);
 	return (0);
 }

@@ -6,7 +6,7 @@
 #    By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/03/19 05:06:16 by vpluchar          #+#    #+#              #
-#    Updated: 2017/03/26 01:55:48 by vpluchar         ###   ########.fr        #
+#    Updated: 2017/03/29 00:13:23 by vpluchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ $(OBJ):
 
 test:
 	@make re
+	@make clean
 	@$(CC) $(FLAGS) main.c libftprintf.a $(LIB)
 	@./a.out
 	@rm ./a.out
