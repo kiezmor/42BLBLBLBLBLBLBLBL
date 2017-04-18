@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/19 05:05:43 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/04/18 17:53:21 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/04/18 19:15:22 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,36 +49,36 @@ int	main(void)
 
 	printf("%s\n", "------------------------------------------------");
 
-	int		a,b;
-	float	c,d;
+	// int		a,b;
+	// float	c,d;
 
-	a = 15;
-	b = a / 2;
-	printf("|%d|\n",b);
-	printf("|%4d|\n",b);
-	printf("|%04d|\n",b);
-	c = 15.3;
-	d = c / 3;
-	printf("|%3.2f|\n",d);
+	// a = 15;
+	// b = a / 2;
+	// printf("|%d|\n",b);
+	// printf("|%4d|\n",b);
+	// printf("|%04d|\n",b);
+	// c = 15.3;
+	// d = c / 3;
+	// printf("|%3.2f|\n",d);
 
-	printf("%s\n", "------------------------------------------------");
+	// printf("%s\n", "------------------------------------------------");
 
-	printf("Float number: |%8.2f|\n", 1234.14159);
-	printf("Hexadecimal: %x\n", 255);
-	printf("Octal: %o\n", 10);
-	printf("Unsigned value: %u\n", 150);
+	// printf("Float number: |%8.2f|\n", 1234.14159);
+	// printf("Hexadecimal: %x\n", 255);
+	// printf("Octal: %o\n", 10);
+	// printf("Unsigned value: %u\n", 150);
 
-	printf("%s\n", "------------------------------------------------");
+	// printf("%s\n", "------------------------------------------------");
 
-	printf(":%s:\n", "Hello, world!");
-	printf(":%15s:\n", "Hello, world!");
-	printf(":%.10s:\n", "Hello, world!");
-	printf(":%-10s:\n", "Hello, world!");
-	printf(":%-15s:\n", "Hello, world!");
-	printf(":%.15s:\n", "Hello, world!");
-	printf(":%15.10s:\n", "Hello, world!");
-	printf(":%-15.10s:\n", "Hello, world!");
+	// printf(":%s:\n", "Hello, world!");
+	// printf(":%15s:\n", "Hello, world!");
+	// printf(":%.10s:\n", "Hello, world!");
+	// printf(":%-10s:\n", "Hello, world!");
+	// printf(":%-15s:\n", "Hello, world!");
+	// printf(":%.15s:\n", "Hello, world!");
+	// printf(":%15.10s:\n", "Hello, world!");
+	// printf(":%-15.10s:\n", "Hello, world!");
 
-	printf("%s\n", "------------------------------------------------");
+	// printf("%s\n", "------------------------------------------------");
 	return (0);
 }

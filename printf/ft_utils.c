@@ -6,13 +6,13 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/18 18:46:23 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/04/18 18:48:37 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/04/18 19:20:01 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*ft_strsubn(char const *s, unsigned int start, size_t len)
+char	*ft_fstrsub(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*tmp;

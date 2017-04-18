@@ -6,7 +6,7 @@
 #    By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/03/19 05:06:16 by vpluchar          #+#    #+#              #
-#    Updated: 2017/04/18 18:48:18 by vpluchar         ###   ########.fr        #
+#    Updated: 2017/04/18 19:18:01 by vpluchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ LIB_INC = ./libft/includes/
 
 ## << REMOVE KEBAB
 
-SRC	= ft_printf.c ft_flag.c ft_utils.c
+SRC	= ft_printf.c ft_flag.c ft_utils.c ft_works.c
 OBJ	= $(SRC:.c=.o)
 
 
