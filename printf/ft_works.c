@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/18 19:17:22 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/04/19 10:10:50 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/04/19 17:05:37 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,26 @@ int			ft_checkmod(char *flag, va_list args)
 		ft_putchar('%');
 		return (1);
 	}
-	while (i < FLAGS)
+	while (i < MODS)
 	{
-		if (ft_strcmp(ft_fstrsub(flag, 0, 1), g_flag_tab[i].key) == 0)
-			return (g_flag_tab[i].ptrfunc(args));
+		printf("{%c}", MOD[i]);
+		printf("}%s{\n", ft_fstrsub(flag, 0, 1));
+		// if (ft_strcmp(ft_fstrsub(flag, 0, 1), ft_fstrsub(MOD, 0, 1)) == 0)
+		// {
+		// 	// ft_printf("%s\n", &MOD[i]);
+		// 	return (i);
+		// 	return (g_flag_tab[i].ptrfunc(args));
+		// }
+		if (flag[0] == MOD[i])
+			printf("[MOD%c]\n", MOD[i]);
+		else
+			return (ft_checkflag(&flag[1], args));
 		i++;
 	}
-	ft_putstr("[Unknown command: %]");
-	ft_putendl(flag);
-	return (0);
+	printf("[Unknown command: %%%c]\n", flag[0]);
+	// ft_putstr("[Unknown command: %]");
+	// ft_putendl(flag[0]);
+	return (ft_checkflag(flag, args));
 }
 
 int			ft_checkflag(char *flag, va_list args)
@@ -87,7 +98,7 @@ int			ft_checkflag(char *flag, va_list args)
 // 			return (g_flag_tab[i].ptrfunc(args));
 // 		i++;
 // 	}
-	ft_putstr("[Unknown command: %]");
-	ft_putendl(flag);
+	ft_putstr("]Unknown command: %[");
+	ft_putendl(&flag[0]);
 	return (0);
 }

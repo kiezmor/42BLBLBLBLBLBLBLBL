@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/19 05:05:43 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/04/18 19:15:22 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/04/19 17:04:57 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	main(void)
 	
 	printf("%s\n", "------------------------------------------------");
 
-	ft_printf("[%s world.\n%d %% same %c\n %s]\n", str, i, ch, "try");
+	ft_printf("([%s world.\n%d %% same %c\n %s])\n", str, i, ch, "try");
 	ft_printf("[%lc]\n", ch);
 	
 	printf("%s\n", "------------------------------------------------");
