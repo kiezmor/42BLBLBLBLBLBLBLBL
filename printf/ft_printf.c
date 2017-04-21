@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/19 05:05:24 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/04/19 16:34:32 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/04/21 09:47:15 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,15 @@ int			ft_printf(const char *format, ...)
 	{
 		if (format[0] == '%' && format)
 		{
-			res += ft_checkmod((char *)format, args);
+			res += ft_checks((char *)format, args);
+			// printf("BITE:%c\n", format[0]);
 			format++;
 		}
 		else if (*format)
-			ft_putchar(format[0]);
+		{
+			while (format != ' ')
+				format++;
+		}
 		format++;
 	}
 

@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/19 05:05:43 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/04/19 17:04:57 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/04/21 06:45:12 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ int	main(void)
 
 	// while (v <= 12)
 	// {
-	// 	ft_putchar(MOD[v]);
-	// 	ft_putchar('\n');
+	// 	printf("{}%c{}\n", MOD[v]);
 	// 	v++;
 	// }
 	
