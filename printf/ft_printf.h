@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/19 05:05:53 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/04/21 07:37:50 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/04/24 11:54:49 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,14 @@ typedef struct	s_flag
 
 int				ft_printf(const char *format, ...);
 
-int				ft_checkflag(char *flag, va_list args);
-int				ft_checks(char *flag, va_list args);
+// int				ft_checkflag(char *flag, va_list args);
+// int				ft_checks(char *flag, va_list args);
+
 int				ft_checkmods(char *flag);
+int				ft_checkf(char flag, va_list args);
 
 
-char			*ft_fstrsub(char const *s, unsigned int start, size_t len);
+// char			*ft_fstrsub(char const *s, unsigned int start, size_t len);
 
 int				flag_s(va_list ap);
 int				flag_c(va_list ap);

@@ -6,13 +6,12 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/19 05:05:43 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/04/21 06:45:12 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/04/24 11:26:52 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "ft_printf.h"
-#include "./libft/includes/libft.h"
 
 int	main(void)
 {
@@ -38,15 +37,19 @@ int	main(void)
 	
 	printf("%s\n", "------------------------------------------------");
 
-	ft_printf("([%s world.\n%d %% same %c\n %s])\n", str, i, ch, "try");
-	ft_printf("[%lc]\n", ch);
+	ft_printf("[%s world.\n%d %% same %c\n %s]\n", str, i, ch, "try");
+	ft_printf("[FUCKING/%lc\\CHAR]\n", ch);
 	
 	printf("%s\n", "------------------------------------------------");
 
 	printf("|%s world.\n% d %% same %c\n %s|\n", str, i, ch, "try");
-	printf("|%lc|\n", ch);
+	printf("|FUCKING/%lc\\CHAR|\n", ch);
 
 	printf("%s\n", "------------------------------------------------");
+
+	// printf("%hc", 't');
+
+	// printf("%s\n", "------------------------------------------------");
 
 	// int		a,b;
 	// float	c,d;

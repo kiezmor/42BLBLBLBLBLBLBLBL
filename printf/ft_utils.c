@@ -6,26 +6,26 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/18 18:46:23 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/04/18 19:20:01 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/04/24 09:22:15 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*ft_fstrsub(char const *s, unsigned int start, size_t len)
-{
-	size_t	i;
-	char	*tmp;
-	char	*t;
+// char	*ft_fstrsub(char const *s, unsigned int start, size_t len)
+// {
+// 	size_t	i;
+// 	char	*tmp;
+// 	char	*t;
 
-	i = 0;
-	if (!s)
-		return (NULL);
-	if (!(tmp = ft_strnew(len)))
-		return (NULL);
-	while (i < len)
-		*(tmp + i++) = *(s + start++);
-	t = tmp;
-	free(tmp);
-	return (t);
-}
+// 	i = 0;
+// 	if (!s)
+// 		return (NULL);
+// 	if (!(tmp = ft_strnew(len)))
+// 		return (NULL);
+// 	while (i < len)
+// 		*(tmp + i++) = *(s + start++);
+// 	t = tmp;
+// 	free(tmp);
+// 	return (t);
+// }
