@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/19 05:05:53 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/04/24 11:54:49 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/04/25 10:49:12 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
+# include <wchar.h>
 # include "./libft/includes/libft.h"
 
 # define FLAGS 4
 # define MODS 12
 # define MOD "0hlqjzt.#-+ "
+# define BUUF 42
 
 typedef struct	s_flag
 {

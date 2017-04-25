@@ -1,35 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_checks.c                                        :+:      :+:    :+:   */
+/*   ft_wcslen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/21 07:09:32 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/04/24 19:11:49 by vpluchar         ###   ########.fr       */
+/*   Created: 2017/04/25 07:22:52 by vpluchar          #+#    #+#             */
+/*   Updated: 2017/04/25 07:26:34 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_checkmods(char *flag)
+int		ft_wcslen(wchar_t *wcs)
 {
 	int	i;
-	
+
 	i = 0;
-	while (i < MODS)
-	{
-		if (flag[0] == MOD[i] && flag[1] == MOD[i])
-		{
-			printf("%s : %c%c\n", "ll or hh", MOD[i], MOD[+1]);
-			return (2);
-		}
-		else if (flag[0] == MOD[i])
-		{
-			printf("%s : %c\n", "l or h", MOD[i]);
-			return (1);
-		}
+	while (*wcs && wcs[i])
 		i++;
-	}
-	return (0);
+	return (i);
 }
