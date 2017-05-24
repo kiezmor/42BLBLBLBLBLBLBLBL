@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/19 05:05:53 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/04/25 10:49:12 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/05/24 11:55:03 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ int				ft_printf(const char *format, ...);
 
 int				ft_checkmods(char *flag);
 int				ft_checkf(char flag, va_list args);
-
 
 // char			*ft_fstrsub(char const *s, unsigned int start, size_t len);
 

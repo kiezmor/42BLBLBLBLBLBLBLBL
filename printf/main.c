@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/19 05:05:43 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/04/25 15:47:57 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/05/24 12:40:23 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int	main(void)
 	// while (p++ <= 100000 * 100)
 	// 	ft_printf("[%s world.\n%d %% same %c\n %s]\n", str, i, ch, "try");
 	printf("%s\n", "------------------------------------------------");
+	
 	void	*bite = "300";
 	ft_putstr(bite);
 	ft_putchar('\n');
@@ -53,8 +54,9 @@ int	main(void)
 	printf("i:%i\n", 300);
 
 	printf("%s\n", "------------------------------------------------");
-	wchar_t	wc= L'\t';
-	wchar_t	*blbl= L"Hello, world!";
+	
+	wchar_t	wc = L'\t';
+	wchar_t	*blbl = L"Hello, world!";
 	ft_putwcs(blbl);
 	ft_putwchar('\n');
 	printf("|WC:%C|\n", wc);
