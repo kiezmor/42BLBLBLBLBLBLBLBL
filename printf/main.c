@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/19 05:05:43 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/05/24 12:40:23 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/05/24 18:51:25 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ int	main(void)
 	str = "Hello";
 	ch = '!';
 	i = 100;
-
 	// int		p = 0;
 	// while (p++ <= 100000 * 100)
 	// 	ft_printf("[%s world.\n%d %% same %c\n %s]\n", str, i, ch, "try");
@@ -52,6 +51,7 @@ int	main(void)
 	printf("|%s world.\n% d %% same %c\n %s|\n", str, i, ch, "try");
 	printf("|FUCKING CHAR WITH CAST /%lc\\|\n", ch);
 	printf("i:%i\n", 300);
+	printf("D:%D\n", 3000);
 
 	printf("%s\n", "------------------------------------------------");
 	

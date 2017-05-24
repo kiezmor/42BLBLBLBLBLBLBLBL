@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/21 07:09:32 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/04/24 19:11:49 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/05/24 19:12:32 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	ft_checkmods(char *flag)
 {
 	int	i;
+	t_mod	p;
 	
 	i = 0;
 	while (i < MODS)
@@ -22,11 +23,13 @@ int	ft_checkmods(char *flag)
 		if (flag[0] == MOD[i] && flag[1] == MOD[i])
 		{
 			printf("%s : %c%c\n", "ll or hh", MOD[i], MOD[+1]);
+			p = {MOD[i], 2};
 			return (2);
 		}
 		else if (flag[0] == MOD[i])
 		{
 			printf("%s : %c\n", "l or h", MOD[i]);
+			p = {"tee", 1};
 			return (1);
 		}
 		i++;
