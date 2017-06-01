@@ -48,10 +48,12 @@ int	main(void)
 	
 	printf("%s\n", "------------------------------------------------");
 
+	long int z = 3000000;
+
 	printf("|%s world.\n% d %% same %c\n %s|\n", str, i, ch, "try");
 	printf("|FUCKING CHAR WITH CAST /%lc\\|\n", ch);
 	printf("i:%i\n", 300);
-	printf("D:%D\n", 3000);
+	printf("D:%ld\n", z);
 
 	printf("%s\n", "------------------------------------------------");
 	
@@ -95,5 +97,6 @@ int	main(void)
 	// printf(":%-15.10s:\n", "Hello, world!");
 
 	// printf("%s\n", "------------------------------------------------");
+	sleep(10);
 	return (0);
 }
