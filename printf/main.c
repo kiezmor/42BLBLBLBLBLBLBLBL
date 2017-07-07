@@ -97,6 +97,6 @@ int	main(void)
 	// printf(":%-15.10s:\n", "Hello, world!");
 
 	// printf("%s\n", "------------------------------------------------");
-	sleep(10);
+	//sleep(10);
 	return (0);
 }
