@@ -13,4 +13,4 @@
 * [Printf](https://github.com/kiezmor/printf)
 	* *Project finish : Colors, %b binary, %e and %f, * precision, L length!*
 ## Graphic
-* [FdF *WIP*](https://github.com/kiezmor/fdf)
+* [FdF *(WIP)*](https://github.com/kiezmor/fdf)
