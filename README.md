@@ -8,4 +8,8 @@
 	* *chle-van profil -> [Canarticho](https://github.com/Canarticho)*
 * [Get Next Line](https://github.com/kiezmor/gnl)
 	* *Project finish : Multi fd work!*
-* [Printf (*WIP*)](https://github.com/kiezmor/printf)
+## Algo
+* [Printf](https://github.com/kiezmor/printf)
+	* *Project finish : Colors, %b binary, %e and %f, * precision, L length!*
+## Graphic
+* [FdF *WIP*](https://github.com/kiezmor/fdf)
