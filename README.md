@@ -14,4 +14,4 @@
 	* *Project finish : Colors, %b binary, %e and %f, * precision, L length...*
 ## Graphic
 * [FdF *(WIP)*](https://github.com/kiezmor/fdf)
-* [Fractol *(WIP)*] (https://github.com/kiezmor/fractol)
+* [Fractol *(WIP)*](https://github.com/kiezmor/fractol)
