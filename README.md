@@ -11,6 +11,7 @@
 	* *Project finish : Multi fd work!*
 ## Algo
 * [Printf](https://github.com/kiezmor/printf)
-	* *Project finish : Colors, %b binary, %e and %f, * precision, L length!*
+	* *Project finish : Colors, %b binary, %e and %f, * precision, L length...*
 ## Graphic
 * [FdF *(WIP)*](https://github.com/kiezmor/fdf)
+* [Fractol *(WIP)*] (https://github.com/kiezmor/fractol)
