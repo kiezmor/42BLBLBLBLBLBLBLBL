@@ -13,5 +13,7 @@
 * [Printf](https://github.com/kiezmor/printf)
 	* *Project finish : Colors, %b binary, %e and %f, * precision, L length...*
 ## Graphic
-* [FdF *(WIP)*](https://github.com/kiezmor/fdf)
-* [Fractol *(WIP)*](https://github.com/kiezmor/fractol)
+* [FdF](https://github.com/kiezmor/fdf)
+* [Fractol](https://github.com/kiezmor/fractol)
+* [Wolf 3D](https://github.com/kiezmor/wolf3d)
+	* *Project make with chle-van*
