@@ -16,4 +16,8 @@
 * [FdF](https://github.com/kiezmor/fdf)
 * [Fractol](https://github.com/kiezmor/fractol)
 * [Wolf 3D](https://github.com/kiezmor/wolf3d)
-	* *Project make with chle-van*
+	* *Project made with chle-van*
+
+## Web
+* [Piscine PHP](https://github.com/kiezmor/piscine_php)
+	* *Rush made with yhaddar -> [yhaddar](https://github.com/YamineRL)*
